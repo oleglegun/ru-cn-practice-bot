@@ -1,0 +1,11 @@
+{
+  "name": "ru-ch-practice-bot",
+  "version": "0.1.0",
+  "description": "Russian-Chinese practice bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Oleg Legun <oleg.legun@gmail.com>",
+  "license": "MIT"
+}
