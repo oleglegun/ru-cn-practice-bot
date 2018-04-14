@@ -7,5 +7,9 @@
     "test": "npm test"
   },
   "author": "Oleg Legun <oleg.legun@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.shuffle": "^4.2.0",
+    "node-telegram-bot-api": "^0.30.0"
+  }
 }

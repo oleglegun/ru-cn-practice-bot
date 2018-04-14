@@ -1,4 +1,4 @@
-const data = require('./data')
+const data = require('./db/data')
 
 const keys = Object.keys(data)
 

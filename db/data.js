@@ -3,6 +3,7 @@ module.exports = [
         id: '14-1',
         russian: 'Здравствуйте. Добро пожаловать, входите, пожалуйста.',
         chinese: 'Nǐ hǎo. Huānyíng, qǐng jìn.',
+        characters: ''
     },
 
     {
@@ -152,7 +153,7 @@ module.exports = [
     {
         id: '14-26',
         russian: 'Твой друг из какой страны? Мой друг из России. Он студент-иностранец.',
-        chinese: 'Nǐ péngyou shì nǎ guó rén? Wǒ péngyou shì Éguórén. Tā shì liùxuésheng.',
+        chinese: 'Nǐ péngyou shì nǎ guó rén? Wǒ péngyou shì Éguórén. Tā shì liúxuésheng.',
     },
 
     {
@@ -273,7 +274,7 @@ module.exports = [
     {
         id: '14-46',
         russian: 'Это чей словарь? Это словарь китайского иностранного студента.',
-        chinese: 'Zhè shì shéide cídiǎn? Zhè běn cídiǎn shì Zhōngguó liùxuésheng de.',
+        chinese: 'Zhè shì shéide cídiǎn? Zhè běn cídiǎn shì Zhōngguó liúxuésheng de.',
     },
 
     {
@@ -334,7 +335,7 @@ module.exports = [
     {
         id: '14-56',
         russian: 'Это тетрадь иностранного студента.',
-        chinese: 'Zhège běnzi shì liùxuésheng de.',
+        chinese: 'Zhège běnzi shì liúxuésheng de.',
     },
 
     {
@@ -376,7 +377,7 @@ module.exports = [
     {
         id: '14-63',
         russian: 'Китайские студенты пригласили нас в общежитие на чай.',
-        chinese: 'Zhōngguó liùxuésheng qǐng wǒmen qù sùshè hē chá.',
+        chinese: 'Zhōngguó liúxuésheng qǐng wǒmen qù sùshè hē chá.',
     },
 
     {
@@ -503,7 +504,7 @@ module.exports = [
     {
         id: '14-84',
         russian: 'У тебя есть старший брат? Нет, у меня нет старшего брата.',
-        chinese: 'Nǐ yǒu mèiyǒu gēge? Bù, wǒ mèiyǒu gēge.',
+        chinese: 'Nǐ yǒu méiyǒu gēge? Bù, wǒ méiyǒu gēge.',
     },
 
     {
@@ -575,7 +576,7 @@ module.exports = [
     {
         id: '14-96',
         russian: 'У него нет книг на английском языке.',
-        chinese: 'Tā mèiyǒu yīngyǔ shū.',
+        chinese: 'Tā méiyǒu yīngyǔ shū.',
     },
 
     {
@@ -594,6 +595,414 @@ module.exports = [
         id: '14-99',
         russian: 'Он учится не в нашем институте, он учится в институте иностранных языков.',
         chinese: 'Tā bù zài wǒmende xuéyuàn xuéxí, tā zài wàiyǔ xuéyuàn xuéxí.',
+    },
+
+    {
+        id: '15-01',
+        russian:
+            'Сколько читальных залов на вашем факультете? Один. Я там часто читаю китайские газеты и журналы.',
+        chinese:
+            'Nǐmen xì yǒu jǐge yuèlǎnshì? Yíge. Wǒ cháng cháng zài nàr kàn Zhōngguó baòzhǐ hé zázhì.',
+    },
+
+    {
+        id: '15-02',
+        russian:
+            'Кто преподает вам разговорный язык? Учитель Ван. Он также преподает нам иероглифику. Преподаватель Се тоже преподает разговорный китайский язык.',
+        chinese:
+            'Shéi jiāo nǐmen kǒuyǔ. Wáng lǎoshī. Tā hái jiāo wǒmen hànzì. Xiè lǎoshī yě jiāo hànyǔ kǒuyǔ.',
+    },
+
+    {
+        id: '15-03',
+        russian: 'Сколько лабораторий в вашем институте? Сорок две.',
+        chinese: 'Nǐmen xuéyuàn yǒu jǐge shíyànshì. Sìshíèr ge.',
+    },
+
+    {
+        id: '15-04',
+        russian: 'Что ты ему сказал? Я сообщил ему имя своего друга.',
+        chinese: 'Nǐ gàosu tā shénme? Wǒ gàosu nǐ wǒ péngyoude míngzi.',
+    },
+
+    {
+        id: '15-05',
+        russian:
+            'Сколько у тебя китайских словарей? У меня девять китайских словарей, а еще есть три английских словаря.',
+        chinese:
+            'Nǐ yǒu jǐběn hànyǔ cídiǎn? Wǒ yǒu jiǔběn hànyǔ cídiǎn, hái yǒu sānběn yīngyǔde cídiǎn.',
+    },
+
+    {
+        id: '15-06',
+        russian: 'Что ты ему возвращаешь? Я ему возвращаю три книги на французском языке.',
+        chinese: 'Nǐ huán tā shénme? Wǒ huán tā sānběn fǎyu shu.',
+    },
+
+    {
+        id: '15-07',
+        russian: 'Я часто хожу в библиотеку и беру книги на иностранных языках.',
+        chinese: 'Wǒ cháng qù túshūguǎn jiè wàiyǔ shū.',
+    },
+
+    {
+        id: '15-08',
+        russian: 'Сколько студентов в вашей группе? Семь студентов.',
+        chinese: 'Nǐmen bān yǒu duōshao xuésheng. Qīge.',
+    },
+
+    {
+        id: '15-09',
+        russian:
+            'Сколько преподавателей преподает вам иностранный язык? Три. Один преподает грамматику, один — разговорный язык, один — иероглифику.',
+        chinese:
+            'Jǐge lǎoshī jiāo nǐmen wàiyǔ? Sānge. Yíge jiāo yǔfǎ, yíge jiāo kǒuyǔ, yíge jiāo hànzì.',
+    },
+
+    {
+        id: '15-10',
+        russian: 'У твоей старшей сестры есть дети? Есть один ребенок.',
+        chinese: 'Nǐ jiějie yǒu háizi ma? Yǒu yíge.',
+    },
+
+    {
+        id: '15-11',
+        russian: 'У тебя есть книги на китайском языке? Есть несколько.',
+        chinese: 'Nǐ yǒu méiyǒu hànyǔ shū? Yǒu jǐběn.',
+    },
+
+    {
+        id: '15-12',
+        russian: 'Где мой журнал? Там.',
+        chinese: 'Wǒde zázhì zaì nǎr? Nàr.',
+    },
+
+    {
+        id: '15-13',
+        russian:
+            'Что преподает вам учитель Ван? Он преподает нам китайский язык. А еще он преподает китайскую иероглифику.',
+        chinese: 'Wáng lǎoshī jiāo nǐmen shénme? Tā jiāo wǒmen hànyǔ. Tā hái jiāo hànzì.',
+    },
+
+    {
+        id: '15-14',
+        russian: 'О чем он тебя спросил? Он спросил меня, как зовут нашего преподавателя.',
+        chinese: 'Tā wèn nǐ shénme? Tā wèn wǒ, wǒmende lǎoshī jiào shénme?',
+    },
+
+    {
+        id: '15-15',
+        russian: 'Ваша библиотека новая? Новая.',
+        chinese: 'Wǒde túshūguǎn xīn ma? Xīn.',
+    },
+
+    {
+        id: '15-16',
+        russian: 'Какие журналы ты берешь в библиотеке? Я беру новые журналы.',
+        chinese: 'Nǐ zaì túshūguǎn jiè nǎxīe zázhì? Wǒ jiè xīn zázhì.',
+    },
+
+    {
+        id: '15-17',
+        russian:
+            'Где ты учишься? Я учусь в Институте иностранных языков на факультете китайской филологии.',
+        chinese: 'Nǐ xuéxí nǎr? Wǒ zaì Wàiyǔ xuéyuànde Zhōngwén xì xuéxí.',
+    },
+
+    {
+        id: '15-18',
+        russian: 'Он не преподает нам грамматику, он преподает нам разговорный язык. ',
+        chinese: 'Tā bù jiāo wǒmen yǔfǎ. Tā jiāo wǒmen kǒuyǔ.',
+    },
+
+    {
+        id: '15-19',
+        russian:
+            'Сколько человек в твоей семье? Четверо: папа, мама, старший брат и я. Брат и я — студенты.',
+        chinese: 'Nǐ jiā yǒu jǐge rén? Sìge: bàba, māma, gēge hé wǒ. Gēge hé wǒ dōu shì xuésheng.',
+    },
+
+    {
+        id: '15-20',
+        russian: 'Он китаец. Он часто помогает друзьям учить китайские иероглифы.',
+        chinese: 'Tā shì Zhōngguórén. Tā cháng cháng bāngzhù péngyou xuéxí hànzì.',
+    },
+
+    {
+        id: '15-21',
+        russian: 'Я с ним не знаком. Познакомь нас, пожалуйста.',
+        chinese: 'Wǒ bù rènshi tā. Qǐng gěi wǒmen jìeshao yíxiàr.',
+    },
+
+    {
+        id: '15-22',
+        russian: 'Чья это машина? Это машина мужа.',
+        chinese: 'Zhè shì shéide chē. Zhè shì zhāngfude chē.',
+    },
+
+    {
+        id: '15-23',
+        russian: 'Они не все заняты. Пригласи их вьпить чаю.',
+        chinese: 'Tāmen bù dōu máng. Qǐng tāmen hē chá.',
+    },
+
+    {
+        id: '15-24',
+        russian: 'Библиотека не там, она на втором этаже.',
+        chinese: 'Túshūguǎn bù zaì nàr, zaì èr céng.',
+    },
+
+    {
+        id: '15-25',
+        russian:
+            'В читальном зале нашего института нет книг на китайском языке, есть в читальном зале Института иностранных языков.',
+        chinese: 'Wǒmen xuéyuànde yuèlǎnshì méiyǒu hànyǔ shū, Wàiyǔ xuéyuànde yuèlǎnshì yǒu.',
+    },
+
+    {
+        id: '15-26',
+        russian:
+            'Сколько у вас преподавателей-иностранцев на факультете? Из каких они стран? На факультете 25 преподавателей-иностранцев. Есть англичане, китайцы, японцы, французы.',
+        chinese:
+            'Nǐmen xì yǒu jǐge wàiguó lǎoshī? Tāmen shì nǎguó rén? Xì yǒu èrshíwǔ lǎoshī. Yǒu  yīngguórén, zhōngguórén, rìběnrén, fǎguórén.',
+    },
+
+    {
+        id: '15-27',
+        russian:
+            'У тебя есть китайско-русский словарь? Есть два словаря: один большой и один маленький. Который из них тебе нужен? Дай мне маленький.',
+        chinese:
+            'Nǐ yǒu méiyǒu hàn-é cídiǎn? Yǒu liǎngběn: yīběn dà, yīběn xiǎo. Nǐ yào nǎběn? Gěi wǒ yīběn xiǎo de.',
+    },
+
+    {
+        id: '15-28',
+        russian:
+            'У меня есть друг. Он китайский студент, изучает русский язык, учится на филологическом факультете. Мы учимся друг у друга.',
+        chinese:
+            'Wǒ yǒu yīge péngyou. Tā shì Zhōngguó xuésheng, xué éyǔ, zaì yǔyánxì xuéxí. Wǒmen hùxiāng xuéxí.',
+    },
+
+    {
+        id: '15-29',
+        russian:
+            'Мой старший брат сейчас учится в Англии. Он очень скучает по родителям, часто пишет им письма, передает привет своим друзьям.',
+        chinese:
+            'Wǒ gēge zaì Yīngguó xuéxí. Tā hěn xiǎng fùmǔ, cháng gěi tāmen xiě xìn, wèn tā péngyou hǎo.',
+    },
+
+    {
+        id: '15-30',
+        russian: 'Я не беру книги в библиотеке. Я покупаю их в магазине.',
+        chinese: 'Wǒ bù zaì túshūguǎn jiè shū. Wǒ zaì shāndiàn mǎi tāmen.',
+    },
+
+    {
+        id: '15-31',
+        russian: 'О чем ты будешь спрашивать преподавателя? Я спрошу его о новых словах.',
+        chinese: 'Nǐ wèn lǎoshī shénme? Wǒ wèn tā shēngcí.',
+    },
+
+    {
+        id: '15-32',
+        russian: 'Сколько здесь новых слов? Здесь 25 новых слов.',
+        chinese: 'Zhèr yǒu duōshao shēngcí? Zhèr yǒu èrshíwǔge shēngcí.',
+    },
+
+    {
+        id: '16-01',
+        russian:
+            'Здесь две рубашки. Которая из них твоя? Моя рубашка белая, а та зеленая — моего старшего брата.',
+        chinese:
+            'Zhèr yǒu liǎng jiàn chènshān. Nǎ jiàn shì nǐde? Wǒde shì báide, nàjiàn lùde shì wǒ gēgede.',
+    },
+
+    {
+        id: '16-02',
+        russian: 'У кого билеты на пекинскую оперу? У нашего преподавателя китайского языка.',
+        chinese: 'Jīngjù piào zaì shéi nǎr? Zaì wǒmen hànyǔ lǎoshī nàr.',
+    },
+
+    {
+        id: '16-03',
+        russian: 'Откуда вы пойдете в театр? Мы пойдем в театр из института.',
+        chinese: 'Nǐmen cóng nǎr qù jùchǎng. Wǒmen cóng xuéyuàn qù jùchǎng.',
+    },
+
+    {
+        id: '16-04',
+        russian: 'Это твоя рубашка? Нет, моя рубашка белая, а не зеленая.',
+        chinese: 'Zhè shì nǐde chènshān ma? Bù, wǒde chènshān bái, bù shì lùde.',
+    },
+
+    {
+        id: '16-05',
+        russian:
+            'У меня два журнала на китайском языке: один — новый, один — старый. Какой (из них) тебе нужен?',
+        chinese: 'Wǒ yǒu liǎngběn hànyǔ zázhì: yīběn xīn, yīběn jiù. Nǐ yào nǎyìběn?',
+    },
+
+    {
+        id: '16-06',
+        russian: 'Куда вы пойдете вечером?',
+        chinese: 'Wǎnshang nǐmen qù nǎr?',
+    },
+
+    {
+        id: '16-07',
+        russian:
+            'Откуда ты пойдешь в библиотеку? Из института? Я пойду из общежития, а не из института.',
+        chinese: 'Nǐ cóng nǎr qù túshūguǎn? Cóng xuéyuàn ma? Wǒ cóng sùshè qù, bù cóng xuéyuàn qù.',
+    },
+
+    {
+        id: '16-08',
+        russian:
+            'Что ты ему возвращаешь? Я возвращаю ему два словаря: один — англо-русский, другой — китайско-французский.',
+        chinese: 'Nǐ huán tā shénme? Wǒ huán tā liǎngběn cídiǎn: yīběn yīng-é, yīběn hàn-fǎ.',
+    },
+
+    {
+        id: '16-09',
+        russian: 'Я дам ему два пиджака: один — черный, другой — белый.',
+        chinese: 'Wǒ gěi tā liǎng jiàn shàngyī: yījiàn hēi, yījiàn bái.',
+    },
+
+    {
+        id: '16-10',
+        russian:
+            'Чьи эти три пальто? Два пальто — моих друзей и одно — мое. А какое из них твое? Мое — черное.',
+        chinese:
+            'Zhè sān jiàn dàyī shì shéide? Liǎng jiàn dàyī shì wǒ péngyoude, yījiàn shì wǒde. Nǎjiàn shì nǐde? Wǒde shì hēide.',
+    },
+
+    {
+        id: '16-11',
+        russian: 'Откуда ты пришел? Я пришел из библиотеки.',
+        chinese: 'Nǐ cóng nǎr lái? Wǒ cóng túshūguǎn lái.',
+    },
+
+    {
+        id: '16-12',
+        russian: 'Что ты ему дашь? Я дам ему две карты: карту Китая и карту России.',
+        chinese: 'Nǐ gěi tā shénme? Wǒ gěi tā liǎng zhāng dìtú: Zhōngguó dìtú hé Éguó dìtú.',
+    },
+
+    {
+        id: '16-13',
+        russian:
+            'Где мое письмо? Твое письмо у преподавателя Вана. Он тебя искал. Но тебя не было.',
+        chinese: 'Wǒde xìn zaì nǎr? Nǐde xìn zaì Wáng lǎoshī nàr. Tā zhǎo nǐ le. Nǐ bù zaì.',
+    },
+
+    {
+        id: '16-14',
+        russian: 'В нашем институте три читальных зала: два новых и один старый.',
+        chinese: 'Wǒmende xuéyuàn yǒu sānge yuèlǎnshì: liǎngge xīn hé yīge jiù.',
+    },
+
+    {
+        id: '16-15',
+        russian: 'Эта книга не моя, она из библиотеки.',
+        chinese: 'Zhèběn shū bù shì wǒde, tā shì túshūguǎnde.',
+    },
+
+    {
+        id: '16-16',
+        russian: 'Приходите вечером ко мне на чай. Спасибо.',
+        chinese: 'Wǎnshang lái wǒ jiā hē chá. Xìexie.',
+    },
+
+    {
+        id: '16-17',
+        russian: 'У него много книг на английском языке. Я часто беру у него книги почитать.',
+        chinese: 'Tā yǒu hěn duō yīngyǔ shū. Wǒ cháng cháng jiè tāde shū.',
+    },
+
+    {
+        id: '16-18',
+        russian: 'Я не надену ту старую рубашку, я надену эту новую.',
+        chinese: 'Wǒ bù chuān nà jiàn jiùde chènshān, wǒ chuān zhè jìan xīnde.',
+    },
+
+    {
+        id: '16-19',
+        russian: 'Что ты ищешь? Я ищу свою ручку. Твоя ручка у меня (здесь). Возвращаю её тебе.',
+        chinese: 'Nǐ zhǎo shénme? Wǒ zhǎo wǒde bǐ. Nǐde bǐ zài wǒ zhèr. Huán nǐ.',
+    },
+
+    {
+        id: '16-20',
+        russian: 'Книга по английской грамматике не на английском языке, а на русском.',
+        chinese: 'Yīngyǔ yǔfǎ shū bù shì yīngyǔde, shì éyǔde.',
+    },
+
+    {
+        id: '16-21',
+        russian:
+            'Я покупаю билеты на пекинскую оперу старшей сестре и жене. Они обе любят пекинскую оперу.',
+        chinese: 'Wǒ gěi jiějie hé qīzi mǎi Jīngjù piào. Tāmen liǎ dōu xǐhuan Jīngjù.',
+    },
+
+    {
+        id: '16-22',
+        russian: 'Он живет не в Пекине, а в Шанхае.',
+        chinese: 'Tā bù zhù Běijīng, zhù Shànghǎi.',
+    },
+
+    {
+        id: '16-23',
+        russian: 'Наши места не здесь, (а) там.',
+        chinese: 'Wǒmende zuòwèi bù zài zhèr, zaì nàr. ',
+    },
+
+    {
+        id: '16-24',
+        russian: 'Этот магазин небольшой, здесь нет книг на иностранных языках.',
+        chinese: 'Zhège shāndiàn bù dà, zhèr méiyǒu wàiyǔ shū.',
+    },
+
+    {
+        id: '16-25',
+        russian:
+            'Кто вам нужен (кого вы ищете)? Мне нужен иностранный студент Ван. Он живет не на двадцатом, а на девятнадцатом этаже.',
+        chinese:
+            'Nǐ zhǎo shéi? Wǒ zhǎo yīge liúxuésheng xìng Wáng. Tā bù zhù èrshí céng, zhù shíjiǔ céng.',
+    },
+
+    {
+        id: '16-26',
+        russian:
+            'Сколько студентов на вашем факультете? На нашем факультете 36 студентов. 30 русских студентов и 6 иностранных.',
+        chinese:
+            'Nǐmen xì yǒu duōshao xuésheng? Wǒmen xì yǒu sānshíliùge xuésheng. Sānshíge éguó liúxuésheng hé liúge wàiguó liúxuésheng.',
+    },
+
+    {
+        id: '16-27',
+        russian:
+            'Их семья состоит из двух человек. Муж — инженер, жена — врач. Давай я тебя с ними познакомлю.',
+        chinese:
+            'Tāmen jiā yǒu liǎngge rén. Zhàngfu gōngchéngshī, qīzi shì dàifu. Lái wǒ gěi nǐ jièshao yíxiàr.',
+    },
+
+    {
+        id: '16-28',
+        russian: 'Присаживайтесь. Здесь есть несколько сегодняшних газет. Почитайте.',
+        chinese: 'Qǐng zuò. Zhèr yǒu jīběn jīntiānde baò. Kàn ba.',
+    },
+
+    {
+        id: '16-29',
+        russian: 'У моего приятеля три авторучки, пять тетрадей, четыре газеты на китайском языке.',
+        chinese: 'Wǒ péngyou yǒu sānzhī bǐ, wǔge běnzi, sìběn hànyǔ baò.',
+    },
+
+    {
+        id: '16-30',
+        russian:
+            'Я возьму в библиотеке два словаря: один русско-китайский, один — китайско-русский.',
+        chinese: 'Wǒ zài túshūguǎn liǎngběn cídiǎn: yīběn é-hàn, yīběn hàn-é.',
     },
 
     {
@@ -714,7 +1123,7 @@ module.exports = [
     {
         id: '25-19',
         russian: 'Он водит машину слишком быстро. Я не поеду на его машине.',
-        chinese: 'Tā kāi chē kāi de tài quài. Wǒ bù zuò tāde chē.',
+        chinese: 'Tā kāi chē kāi de tài kuài. Wǒ bù zuò tāde chē.',
     },
 
     {
