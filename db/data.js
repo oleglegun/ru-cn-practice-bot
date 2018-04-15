@@ -3,287 +3,287 @@ module.exports = [
         id: '14-1',
         ru: 'Здравствуйте. Добро пожаловать, входите, пожалуйста.',
         pinyin: 'Nǐ hǎo. Huānyíng, qǐng jìn.',
-        chars: '',
+        chars: '你 _. __, _ _.',
     },
 
     {
         id: '14-2',
         ru: 'Как поживаете? У меня все хорошо.',
         pinyin: 'Nǐ hǎo ma? Wǒ hěn hǎo.',
-        chars: '',
+        chars: '你 _ _? 我 _ _.',
     },
 
     {
         id: '14-3',
         ru: 'Вы будете пить чай? Я выпью чай, спасибо.',
         pinyin: 'Nǐn hē chá ma? Wǒ hē chá, xìexie.',
-        chars: '',
+        chars: '_ _ _ _? 我 _ _, __.',
     },
 
     {
         id: '14-4',
         ru: 'Это китайский чай.',
         pinyin: 'Zhè shì Zhōngguó chá.',
-        chars: '',
+        chars: '_ 是 __ _.',
     },
 
     {
         id: '14-5',
         ru: 'Китайский чай очень хороший.',
         pinyin: 'Zhōngguó chá hěn hǎo.',
-        chars: '',
+        chars: '__ _ _ _.',
     },
 
     {
         id: '14-6',
         ru: 'Пожалуйста, выпейте пива.',
         pinyin: 'Qǐng hē píjǐu.',
-        chars: '',
+        chars: '_ _ __',
     },
 
     {
         id: '14-7',
         ru: 'Какое пиво вы будете пить?',
         pinyin: 'Nǐ hē shénme píjǐu?',
-        chars: '',
+        chars: '你 _ __ __?',
     },
 
     {
         id: '14-8',
         ru: 'Я выпью немецкое пиво.',
         pinyin: 'Wǒ hē Déguó píjǐu.',
-        chars: '',
+        chars: '我 _ __ __.',
     },
 
     {
         id: '14-9',
         ru: 'Немецкое пиво очень хорошее.',
         pinyin: 'Déguó píjǐu hěn hǎo.',
-        chars: '',
+        chars: '__ __ _ _.',
     },
 
     {
         id: '14-10',
         ru: 'Курите, пожалуйста. Спасибо, я не курю.',
         pinyin: 'Qǐng xīyān. Xìexie, wǒ bù xī (bù xīyān).',
-        chars: '',
+        chars: '_ __. __, 我 _ _ (_ __).',
     },
 
     {
         id: '14-11',
         ru: 'Вы будете пить кофе?',
         pinyin: 'Nǐn hē kāfēi ma?',
-        chars: '',
+        chars: '_ _ __ _?',
     },
 
     {
         id: '14-12',
         ru: 'Спасибо за твою книгу.',
         pinyin: 'Xìexie nǐde shū.',
-        chars: '',
+        chars: '__ 你的 _.',
     },
 
     {
         id: '14-13',
         ru: 'Китайцы пьют чай, русские тоже пьют чай.',
         pinyin: 'Zhōngguórén hē chá, Éguórén yě hē chá.',
-        chars: '',
+        chars: '___ _ _, ___ _ _ _.',
     },
 
     {
         id: '14-14',
         ru: 'Он из какой страны? Он китаец?',
         pinyin: 'Tā shì nǎ guó rén? Tā shì Zhōngguó rén?',
-        chars: '',
+        chars: '他 是 _ _ _? 他 是 __ _?',
     },
 
     {
         id: '14-15',
         ru: 'Китайцы пьют чай с молоком?',
         pinyin: 'Zhōngguórén hē chá jiā niúnǎi ma?',
-        chars: '',
+        chars: '___ _ _ _ __ _?',
     },
 
     {
         id: '14-16',
         ru: 'Приветствую Вас. Кто вы? Из какой страны?',
         pinyin: 'Huānyíng huānyíng. Nǐ shì shéi? Nǎ guó rén?',
-        chars: '',
+        chars: '__ __. 你 是 _? _ _ _?',
     },
 
     {
         id: '14-17',
         ru: 'Пожалуйста входите. Чувствуйте себя как дома.',
         pinyin: 'Qǐng jìn. Huānyíng huānyíng.',
-        chars: '',
+        chars: '_ _. __ __.',
     },
 
     {
         id: '14-18',
         ru: 'Эта книга господина Вана. Он преподаватель китайского языка.',
         pinyin: 'Zhè shì Wáng xiānsheng de shū.',
-        chars: '',
+        chars: '_ 是 _ __ _ _.',
     },
 
     {
         id: '14-19',
         ru: 'Все врачи очень заняты. Я свободен.',
         pinyin: 'Dàifu dōu hěn máng. Wǒ bù máng.',
-        chars: '',
+        chars: '__ _ _ _. 我 _ _.',
     },
 
     {
         id: '14-20',
         ru: 'Чья это карта? Это карта моего приятеля.',
         pinyin: 'Zhè shì shéi de dìtú. Zhè zhāng dìtú shì wǒ péngyou de.',
-        chars: '',
+        chars: '_ 是 _ _ __. _ _ __ 是 我 __ _.',
     },
 
     {
         id: '14-21',
         ru: 'Скажите, пожалуйста, как Ваша фамилия? Моя фамилия Ван.',
         pinyin: 'Qǐng wèn, Nǐn guì xìng. Wǒ xìng Wáng.',
-        chars: '',
+        chars: '_ _, _ _ _. 我 _ _.',
     },
 
     {
         id: '14-22',
         ru: 'Как Вас зовут? Меня зовут Ван Хунвень.',
         pinyin: 'Nǐ jiào shénme? Wǒ jiào Wáng Hóngwén.',
-        chars: '',
+        chars: '你 _ __? 我 _ _ __.',
     },
 
     {
         id: '14-23',
         ru: 'Извините, вы господин Ван? Да, приветствую.',
         pinyin: 'Duìbùqǐ, nǐ shì Wáng xiānsheng ma? Shì, huānyíng.',
-        chars: '',
+        chars: '___, 你 是 _ __ _? _, __.',
     },
 
     {
         id: '14-24',
         ru: 'Какая у него фамилия? Его фамилия Ван.',
         pinyin: 'Tā xìng shénme? Tā xìng Wáng.',
-        chars: '',
+        chars: '他 _ __? 他 _ _.',
     },
 
     {
         id: '14-25',
         ru: 'Он преподаватель английского языка? Нет, он преподавать русского языка.',
         pinyin: 'Tā shì yīngyǔ lǎoshī ma? Bù, tā shì Éyǔ lǎoshī.',
-        chars: '',
+        chars: '他 是 __ __ _? _, 他 是 __ __.',
     },
 
     {
         id: '14-26',
         ru: 'Твой друг из какой страны? Мой друг из России. Он студент-иностранец.',
         pinyin: 'Nǐ péngyou shì nǎ guó rén? Wǒ péngyou shì Éguórén. Tā shì liúxuésheng.',
-        chars: '',
+        chars: '你 __ 是 _ _ _? 我 __ 是 ___. 他 是 ___.',
     },
 
     {
         id: '14-27',
         ru: 'Ты что учишь? Я учу китайский язык, а ты?',
         pinyin: 'Nǐ xué shénme? Wǒ xué hànyǔ, nǐ ne?',
-        chars: '',
+        chars: '你 _ __? 我 _ __, 你 _?',
     },
 
     {
         id: '14-28',
         ru: 'Я учу корейский язык.',
         pinyin: 'Wǒ xué cháoxiǎnyǔ.',
-        chars: '',
+        chars: '我 _ ___.',
     },
 
     {
         id: '14-29',
         ru: 'Я студент института иностранных языков. Я учу французский язык.',
         pinyin: 'Wǒ shì wàiyǔ xuéyuàn de xuésheng. Wǒ xué fǎyǔ.',
-        chars: '',
+        chars: '我 是 __ __ _ __. 我 _ __.',
     },
 
     {
         id: '14-30',
         ru: 'Не все преподаватели нашего института русские.',
         pinyin: 'Wǒmen xuéyuàn de lǎoshī bù dōu shì Éguórén.',
-        chars: '',
+        chars: '我_ __ _ __ _ _ 是 ___.',
     },
 
     {
         id: '14-31',
         ru: 'Все наши преподаватели иностранного языка иностранцы.',
         pinyin: 'Wǒmen wàiyǔ de lǎoshī dōu shì wàiguórén.',
-        chars: '',
+        chars: '我_ __ _ __ _ 是 ___.',
     },
 
     {
         id: '14-32',
         ru: 'Мой младший брат тоже изучает китайский язык. Он очень занят.',
         pinyin: 'Wǒ dìdì yě xuéxí hànyǔ. Tā hěn máng.',
-        chars: '',
+        chars: '我 __ _ __ __. 他 _ _.',
     },
 
     {
         id: '14-33',
         ru: 'Скажите, пожалуйста, чья это книга? Это книга господина Вана.',
         pinyin: 'Qǐng wèn, zhè shì shéi de shū? Zhè běn shū shì Wáng xiānsheng de.',
-        chars: '',
+        chars: '_ _, _ 是 _ _ _? _ _ _ 是 _ __ _.',
     },
 
     {
         id: '14-34',
         ru: 'Скажите, пожалуйста, что это? Это книга по китайскому языку.',
         pinyin: 'Qǐng wèn, zhè shì shénme? Zhè shì zhōngwén shū.',
-        chars: '',
+        chars: '_ _, _ 是 __? _ 是 __ _.',
     },
 
     {
         id: '14-35',
         ru: 'Ваш врач старый? Он молодой.',
         pinyin: 'Nǐde dàifu lǎo bù lǎo? Tā niánqīng.',
-        chars: '',
+        chars: '你_ __ _ _ _? 他 __.',
     },
 
     {
         id: '14-36',
         ru: 'Чья это машина? Это моя машина. Она хорошая?',
         pinyin: 'Zhè shì shéi de chē? Zhè shì wǒde chē. Tā hǎo ma?',
-        chars: '',
+        chars: '_ 是 _ _ _? _ 是 我_ _. 她 _ _?',
     },
 
     {
         id: '14-37',
         ru: 'У твоих родителей все хорошо? У моих папы и мамы все хорошо.',
         pinyin: 'Nǐde fùmǔ dōu hěn hǎo ma? Wǒ bàba hé māma dōu hěn hǎo.',
-        chars: '',
+        chars: '你_ __ _ _ _ _? 我 __ _ __ _ _ _.',
     },
 
     {
         id: '14-38',
         ru: 'Скажите, пожалуйста, врач Ван дома? Да, заходите, пожалуйста присаживайтесь.',
         pinyin: 'Qǐng wèn, Wáng dàifu zài ma? Shì, jìn, qǐng zuò.',
-        chars: '',
+        chars: '_ _, _ __ _ _? _, _, __.',
     },
 
     {
         id: '14-39',
         ru: 'Господин Ван здесь? Нет. А где он? Он в институте.',
         pinyin: 'Wáng xiānsheng zài ma? Bù. Tā zài nǎr? Tā zài xuéyuàn.',
-        chars: '',
+        chars: '_ __ __? _. 他 _ _? 他 _ __.',
     },
 
     {
         id: '14-40',
         ru: 'Где твоя карта? Она в общежитии.',
         pinyin: 'Nǐde dìtú zài nǎr? Tā zài sùshè.',
-        chars: '',
+        chars: '你_ __ _ _? 她 _ __.',
     },
 
     {
         id: '14-41',
         ru: 'Вы живете в каком номере? Я живу на втором этаже в номере 241.',
         pinyin: 'Nǐ zhù duōshao hào? Wǒ zhù èr céng, èrsìyīhào.',
-        chars: '',
+        chars: '你 _ __ _? 我 _ _ _, ____.',
     },
 
     {
@@ -305,105 +305,105 @@ module.exports = [
         ru:
             'Это Хуанхэ (жёлтая река)? Нет, это Янцзы (длинная река). А где Хуанхэ? Смотрите здесь.',
         pinyin: 'Zhè shì Huánghé? Bù, zhè shì Chángjiāng. Huánghé zài nǎr? Kàn zhèr.',
-        chars: '',
+        chars: '_ 是 __? _, _ 是 __. __ _ __? _ __.',
     },
 
     {
         id: '14-45',
         ru: 'Это какой словарь? Это словарь китайского языка.',
         pinyin: 'Zhè shì shénme cídiǎn? Zhè shì hànyǔ cídiǎn.',
-        chars: '',
+        chars: '_ 是 __ __? _ 是 __ __.',
     },
 
     {
         id: '14-46',
         ru: 'Это чей словарь? Это словарь китайского иностранного студента.',
         pinyin: 'Zhè shì shéide cídiǎn? Zhè běn cídiǎn shì Zhōngguó liúxuésheng de.',
-        chars: '',
+        chars: '_ 是 __ __? _ _ __ 是 __ ___ _.',
     },
 
     {
         id: '14-47',
         ru: 'Где мой иллюстрированный журнал? Здесь.',
         pinyin: 'Wǒ de huàbaò zài nǎr? Zhèr.',
-        chars: '',
+        chars: '我 _ __ _ __? __.',
     },
 
     {
         id: '14-48',
         ru: 'Я бы воспользовался твоей картой.',
         pinyin: 'Wǒ yòng nǐde dìtú.',
-        chars: '',
+        chars: '我 _ 你_ __.',
     },
 
     {
         id: '14-49',
         ru: 'Это газета какой страны? Это китайская газета. Я хотел бы посмотреть.',
         pinyin: 'Zhè fèn baòzhǐ shì nǎ guó de? Zhè fèn baòzhǐ shì Zhōngguó de. Wǒ yào kàn kàn. ',
-        chars: '',
+        chars: '_ _ __ 是 _ _ _? _ _ __ 是 __ _. 我 _ __.',
     },
 
     {
         id: '14-50',
         ru: 'Возвращаю вам книгу. Спасибо.',
         pinyin: 'Huán nǐ shū. Xìexie.',
-        chars: '',
+        chars: '_ 你 _. __.',
     },
 
     {
         id: '14-51',
         ru: 'Я сейчас не пользуюсь моей машиной. Бери пользуйся. Спасибо. Не стоит благодарности.',
         pinyin: 'Wǒ xiànzài bù yòng wǒde chē. Yòng ba. Xìexie. Bùkèqi.',
-        chars: '',
+        chars: '我 __ _ _ 我_ _. _ _. __. ___.',
     },
 
     {
         id: '14-52',
         ru: 'Смотри, это его отец. Он врач.',
         pinyin: 'Nǐ kàn, zhè shì tā bàba. Tā shì dàifu.',
-        chars: '',
+        chars: '你 _, _ 是 他 __. 他 是 __.',
     },
 
     {
         id: '14-53',
         ru: 'Вы заняты? Мы все сейчас не заняты.',
         pinyin: 'Nǐmen máng bù máng? Xiànzài wǒmen dōu bù máng.',
-        chars: '',
+        chars: '你_ _ _ _? __ 我_ _ _ _.',
     },
 
     {
         id: '14-54',
         ru: 'Какой ваш номер телефона? 9468210537',
         pinyin: 'Nǐde shǒujī haòmǎ shì duōshao? jiǔ sì liù bā èr yī líng wǔ sān qī',
-        chars: '',
+        chars: '你_ __ __ 是 __? _ _ _ _ _ _ _ _ _ _',
     },
 
     {
         id: '14-55',
         ru: 'Что изучает твоя старшая сестра? Она изучает русский язык. Она сейчас в России.',
         pinyin: 'Nǐ jiějie xué shénme. Tā xué éyǔ. Xiànzài tā zài Éguó.',
-        chars: '',
+        chars: '你 __ _ __. 她 _ __. __ 她 _ __.',
     },
 
     {
         id: '14-56',
         ru: 'Это тетрадь иностранного студента.',
         pinyin: 'Zhège běnzi shì liúxuésheng de.',
-        chars: '',
+        chars: '__ __ 是 ___ _.',
     },
 
     {
         id: '14-57',
         ru: 'Ты знаком с его другом? Знаком.',
         pinyin: 'Nǐ rènshi nǐ péngyou ma? Rènshi.',
-        chars: '',
+        chars: '你 __ 你 __ _? __.',
     },
 
     {
         id: '14-58',
         ru: 'Вы знакомы? Это мой друг и учитель.',
         pinyin: 'Nǐmen rènshi ma? Zhè shì wǒ péngyou yě shì wǒde lǎoshī.',
-        chars: '',
+        chars: '你_ __ _? _ 是 我 __ _ 是 我_ __.',
     },
 
     {
@@ -417,35 +417,35 @@ module.exports = [
         id: '14-60',
         ru: 'Я не знаком ни с его старшим братом, ни с его младшей сестрой.',
         pinyin: 'Wǒ bù rènshi tā gēge yě bù rènshi tā mèimei.',
-        chars: '',
+        chars: '我 _ __ 他 __ _ _ __ 他 __.',
     },
 
     {
         id: '14-61',
         ru: 'Куда ты идешь? Я иду в общежитие к приятелю.',
-        pinyin: 'Nǐ qù nǎr. Wǒ qù sùshè kàn péngyou.',
-        chars: '',
+        pinyin: 'Nǐ qù nǎr? Wǒ qù sùshè kàn péngyou.',
+        chars: '你 _ _? 我 _ __ _ __.',
     },
 
     {
         id: '14-62',
         ru: 'Ты часто там бываешь? Да, часто.',
         pinyin: 'Nǐ cháng qù nàr ma? Shì, cháng qù.',
-        chars: '',
+        chars: '你 _ _ _ _? _, _ _.',
     },
 
     {
         id: '14-63',
         ru: 'Китайские студенты пригласили нас в общежитие на чай.',
         pinyin: 'Zhōngguó liúxuésheng qǐng wǒmen qù sùshè hē chá.',
-        chars: '',
+        chars: '__ ___ _ 我_ _ __ _ _.',
     },
 
     {
         id: '14-64',
         ru: 'Он сейчас в Китае? Нет, он сейчас во Франции.',
-        pinyin: 'Xiànzài tā zài Zhōngguó. Bù, xiànzài tā zài Fǎguó.',
-        chars: '',
+        pinyin: 'Xiànzài tā zài Zhōngguó ma? Bù, xiànzài tā zài Fǎguó.',
+        chars: '__ 他 _ __ _? _, __ 他 _ __.',
     },
 
     {
@@ -459,14 +459,14 @@ module.exports = [
         id: '14-66',
         ru: 'Он друг моего отца. Мы часто навещаем его.',
         pinyin: 'Tā shì wǒ bàbade péngyou. Wǒmen cháng qù kàn tā.',
-        chars: '',
+        chars: '他 是 我 _ ___ __. 我_ _ _ _ 他.',
     },
 
     {
         id: '14-67',
         ru: 'Ты часто ходишь в магазин? Не часто. Моя мама часто ходит.',
         pinyin: 'Nǐ cháng qù shāndiàn ma? Bù cháng. Wǒ māma cháng qù.',
-        chars: '',
+        chars: '你 _ _ __ _? _ _. 我 __ _ _.',
     },
 
     {
@@ -479,99 +479,99 @@ module.exports = [
     {
         id: '14-69',
         ru: 'Куда ты идешь? Я иду на почту покупать марки.',
-        pinyin: 'Nǐ qù nàr. Wǒ qù yóujú mǎi yóupiào.',
-        chars: '',
+        pinyin: 'Nǐ qù nàr? Wǒ qù yóujú mǎi yóupiào.',
+        chars: '你 _ _? 我 _ __ _ __.',
     },
 
     {
         id: '14-70',
         ru: 'Разрешите представить, это наш профессор нашего института.',
         pinyin: 'Wǒ jìeshao yíxiàr. Zhè shì wǒmen xuéyuànde jiàoshòu.',
-        chars: '',
+        chars: '我 __ ___. _ 是 我_ ___ __.',
     },
 
     {
         id: '14-71',
         ru: 'Они все тоже придут в наш институт изучать русский язык.',
         pinyin: 'Tāmen yě dōu lái wǒmen xuéyuàn xué éyǔ.',
-        chars: '',
+        chars: '__ _ _ _ 我_ __ _ __.',
     },
 
     {
         id: '14-72',
         ru: 'Я иду в магазин за ручками и бумагой. Ты пойдёшь?',
         pinyin: 'Wǒ qù shāndiàn mǎi bǐ hé zhǐ. Nǐ qù ma?',
-        chars: '',
+        chars: '我 _ __ _ _ _ _. 你 _ _?',
     },
 
     {
         id: '14-73',
         ru: 'Твой друг говорит по-русски? Нет, он китаец.',
         pinyin: 'Nǐ péngyou shūo éyǔ ma? Bù, tā shì Zhōngguórén.',
-        chars: '',
+        chars: '你 __ _ __ _? _, 他 是 ___.',
     },
 
     {
         id: '14-74',
         ru: 'В каком номере она живёт? Она живет в номере 521.',
         pinyin: 'Tā zhù duōshao hào? Tā zhù wǔ èr yī hào.',
-        chars: '',
+        chars: '她 _ __ _? 她 _ _ _ _ _.',
     },
 
     {
         id: '14-75',
         ru: 'Твой друг придёт? Нет, он пойдет в институт возвращать словари.',
         pinyin: 'Nǐ péngyou lái ma? Bù, tā qù xuéyuàn huán cídiǎn.',
-        chars: '',
+        chars: '你 __ _ _? _, 他 _ __ _ __.',
     },
 
     {
         id: '14-76',
         ru: 'Тебе сейчас тоже нужна ручка? Нет, бери пожалуйста.',
         pinyin: 'Xiànzài nǐ yě yòng bù yòng bǐ. Bù, nǐ yòng ba.',
-        chars: '',
+        chars: '__ 你 _ _ _ _ _. _, 你 _ _.',
     },
 
     {
         id: '14-77',
         ru: 'Я иду в институт иностранных языков вернуть ему тетрадь по французскому.',
         pinyin: 'Wǒ qù wàiyǔ xuéyuàn huán tā fǎyǔ běnzi.',
-        chars: '',
+        chars: '我 _ __ __ _ 他 __ __.',
     },
 
     {
         id: '14-78',
         ru: 'Студенты института иностранных языков не все из России.',
         pinyin: 'Wàiyǔ xuéyuànde xuésheng bù dōu shì Éguórén.',
-        chars: '',
+        chars: '__ ___ __ _ _ 是 ___.',
     },
 
     {
         id: '14-79',
         ru: 'Мы все с ним знакомы. Он наш преподаватель, профессор Ван.',
         pinyin: 'Wǒmen dōu rènshi tā. Tā shì wǒmende lǎoshī, Wáng jiàoshòu.',
-        chars: '',
+        chars: '我_ _ __ 他. 他 是 我_ __, _ __.',
     },
 
     {
         id: '14-80',
         ru: 'Мы часто говорим по-китайски. Мы все учим китайский язык.',
         pinyin: 'Wǒmen cháng shūo hànyǔ. Wǒmen dōu xué hànyǔ.',
-        chars: '',
+        chars: '我_ _ _ __. 我_ _ _ __.',
     },
 
     {
         id: '14-81',
         ru: 'Где ты работаешь? Я работаю в книжном магазине.',
         pinyin: 'Nǐ zài nǎr gōngzuò? Wǒ zài shūdiàn gōngzuò.',
-        chars: '',
+        chars: '你 _ _ __? 我 _ __ __.',
     },
 
     {
         id: '14-82',
         ru: 'Его жена не работает в банке. Она управляющая компанией.',
         pinyin: 'Tāde qīzi bù zài yínháng gōngzuò. Tā shì gōngsīde jīnglǐ.',
-        chars: '',
+        chars: '他_ __ _ _ __ __. 她 是 ___ __.',
     },
 
     {
@@ -579,119 +579,119 @@ module.exports = [
         ru:
             'Он очень скучает по жене и детям, часто пишет им письма, передает привет своим друзьям.',
         pinyin: 'Tā hěn xiǎng qīzi hé háizi, cháng cháng gěi tāmen xǐe xìn, wèn tā péngyou hǎo.',
-        chars: '',
+        chars: '他 _ _ __ _ __, _ _ _ 他_ _ _, _ 他 __ _.',
     },
 
     {
         id: '14-84',
         ru: 'У тебя есть старший брат? Нет, у меня нет старшего брата.',
         pinyin: 'Nǐ yǒu méiyǒu gēge? Bù, wǒ méiyǒu gēge.',
-        chars: '',
+        chars: '你 _ __ __? _, 我 __ __.',
     },
 
     {
         id: '14-85',
         ru: 'Кем ты работает? Я служащий банка.',
         pinyin: 'Nǐ zuò shénme gōngzuò? Wǒ shì yínhángde zhíyuán.',
-        chars: '',
+        chars: '你 _ __ __? 我 是 ___ __.',
     },
 
     {
         id: '14-86',
         ru: 'Я часто покупаю ей (для неё) книги и журналы на английском языке.',
         pinyin: 'Wǒ cháng cháng gěi tā mǎi yīngwén shū hé zázhì.',
-        chars: '',
+        chars: '我 _ _ _ 她 _ __ _ _ __.',
     },
 
     {
         id: '14-87',
         ru: 'Кому (для кого) ты покупаешь журнал на китайском языке?',
         pinyin: 'Nǐ gěi shéi mǎi zhōngwén zázhì?',
-        chars: '',
+        chars: '你 _ _ _ __ __?',
     },
 
     {
         id: '14-88',
         ru: 'Он пекинец. Он расскажет нам о Пекине.',
         pinyin: 'Tā shì Běijīngrén. Tā gěi wǒmen jìeshao Běijīng.',
-        chars: '',
+        chars: '他 是 ___. 他 _ 我_ __ __.',
     },
 
     {
         id: '14-89',
         ru: 'Я иду в общежитие вернуть другу тетрадь.',
         pinyin: 'Wǒ qù sùshè huán péngyou běnzi.',
-        chars: '',
+        chars: '我 _ __ _ __ __.',
     },
 
     {
         id: '14-90',
         ru: 'Чьё это письмо? Это письмо моей старшей сестры.',
         pinyin: 'Zhè fēng xìn shì shéide? Zhè fēng xìn shì wǒ jiějiede.',
-        chars: '',
+        chars: '_ _ _ 是 __? _ _ _ 是 我 ___.',
     },
 
     {
         id: '14-91',
         ru: 'Я пишу письма не в институте, я пишу письма дома.',
         pinyin: 'Wǒ bù zài xuéyuàn xǐe xìn, wǒ zài jiā xǐe xìn.',
-        chars: '',
+        chars: '我 _ _ __ _ _, 我 _ _ _ _.',
     },
 
     {
         id: '14-92',
         ru: 'Я покупаю не это, а то.',
         pinyin: 'Wǒ zhègè bù mǎi, nàgè mǎi.',
-        chars: '',
+        chars: '我 __ _ _, __ _.',
     },
 
     {
         id: '14-93',
         ru: 'Я живу не в общежитии, а дома.',
         pinyin: 'Wǒ bù zài sùshè zhù, zài jiā zhù.',
-        chars: '',
+        chars: '我 _ _ __ _, _ _ _.',
     },
 
     {
         id: '14-94',
         ru: 'Как дела у твоего старшего брата? Спасибо, все хорошо.',
         pinyin: 'Nǐde gēge hǎo ma? Xìexie, dōu hǎo.',
-        chars: '',
+        chars: '你_ __ _ _? __, _ _.',
     },
 
     {
         id: '14-95',
         ru: 'Давай я познакомлю тебя со служащим нашей фирмы. Его фамилия Ван.',
         pinyin: 'Lái wǒ gěi nǐ jìeshao wǒmen gōngsīde zhíyuán. Tā xìng Wáng.',
-        chars: '',
+        chars: '_ 我 _ 你 __ 我_ ___ __. 他 _ _.',
     },
 
     {
         id: '14-96',
         ru: 'У него нет книг на английском языке.',
         pinyin: 'Tā méiyǒu yīngyǔ shū.',
-        chars: '',
+        chars: '他 __ __ _.',
     },
 
     {
         id: '14-97',
         ru: 'Идите сюда, я вас познакомлю. Это мой старший брат, это мой друг.',
         pinyin: 'Lái zhèr, wǒ gěi nǐmen jìeshao. Zhè shì wǒ gēge, zhè shì wǒ péngyou.',
-        chars: '',
+        chars: '_ _, 我 _ 你_ __. _ 是 我 __, _ 是 我 __.',
     },
 
     {
         id: '14-98',
         ru: 'Он китаец. Он часто рассказывает нам о Китае.',
         pinyin: 'Tā shì Zhōngguórén. Tā cháng cháng gěi wǒmen jìeshao Zhōngguó.',
-        chars: '',
+        chars: '他 是 ___. 他 _ _ _ 我_ __ __.',
     },
 
     {
         id: '14-99',
         ru: 'Он учится не в нашем институте, он учится в институте иностранных языков.',
         pinyin: 'Tā bù zài wǒmende xuéyuàn xuéxí, tā zài wàiyǔ xuéyuàn xuéxí.',
-        chars: '',
+        chars: '他 _ _ 我__ __ __, 他 _ __ __ __.',
     },
 
     {
@@ -700,6 +700,7 @@ module.exports = [
             'Сколько читальных залов на вашем факультете? Один. Я там часто читаю китайские газеты и журналы.',
         pinyin:
             'Nǐmen xì yǒu jǐge yuèlǎnshì? Yíge. Wǒ cháng cháng zài nàr kàn Zhōngguó baòzhǐ hé zázhì.',
+        chars: '你_ _ _ __ ___? __. 我 _ _ _ _ _ __ __ _ __.',
     },
 
     {
@@ -708,20 +709,21 @@ module.exports = [
             'Кто преподает вам разговорный язык? Учитель Ван. Он также преподает нам иероглифику. Преподаватель Се тоже преподает разговорный китайский язык.',
         pinyin:
             'Shéi jiāo nǐmen kǒuyǔ. Wáng lǎoshī. Tā hái jiāo wǒmen hànzì. Xiè lǎoshī yě jiāo hànyǔ kǒuyǔ.',
+        chars: '_ _ 你_ __. _ __. 他 _ _ 我_ __. _ __ _ _ __ __.',
     },
 
     {
         id: '15-03',
         ru: 'Сколько лабораторий в вашем институте? Сорок две.',
         pinyin: 'Nǐmen xuéyuàn yǒu jǐge shíyànshì. Sìshíèr ge.',
-        chars: '',
+        chars: '你_ __ _ __ ___. ___ _.',
     },
 
     {
         id: '15-04',
         ru: 'Что ты ему сказал? Я сообщил ему имя своего друга.',
         pinyin: 'Nǐ gàosu tā shénme? Wǒ gàosu nǐ wǒ péngyoude míngzi.',
-        chars: '',
+        chars: '你 __ 他 __? 我 __ 你 我 ___ __.',
     },
 
     {
@@ -730,27 +732,28 @@ module.exports = [
             'Сколько у тебя китайских словарей? У меня девять китайских словарей, а еще есть три английских словаря.',
         pinyin:
             'Nǐ yǒu jǐběn hànyǔ cídiǎn? Wǒ yǒu jiǔběn hànyǔ cídiǎn, hái yǒu sānběn yīngyǔde cídiǎn.',
+        chars: '你 _ __ __ __? 我 _ __ __ __, _ _ __ ___ __.',
     },
 
     {
         id: '15-06',
         ru: 'Что ты ему возвращаешь? Я ему возвращаю три книги на французском языке.',
         pinyin: 'Nǐ huán tā shénme? Wǒ huán tā sānběn fǎyu shu.',
-        chars: '',
+        chars: '你 _ 他 __? 我 _ 他 __ __ _.',
     },
 
     {
         id: '15-07',
         ru: 'Я часто хожу в библиотеку и беру книги на иностранных языках.',
         pinyin: 'Wǒ cháng qù túshūguǎn jiè wàiyǔ shū.',
-        chars: '',
+        chars: '我 _ _ ___ _ __ _.',
     },
 
     {
         id: '15-08',
         ru: 'Сколько студентов в вашей группе? Семь студентов.',
         pinyin: 'Nǐmen bān yǒu duōshao xuésheng. Qīge.',
-        chars: '',
+        chars: '你_ _ _ __ __. __.',
     },
 
     {
@@ -759,27 +762,28 @@ module.exports = [
             'Сколько преподавателей преподает вам иностранный язык? Три. Один преподает грамматику, один — разговорный язык, один — иероглифику.',
         pinyin:
             'Jǐge lǎoshī jiāo nǐmen wàiyǔ? Sānge. Yíge jiāo yǔfǎ, yíge jiāo kǒuyǔ, yíge jiāo hànzì.',
+        chars: '__ __ _ 你_ __? __. __ _ __, __ _ __, __ _ __.',
     },
 
     {
         id: '15-10',
         ru: 'У твоей старшей сестры есть дети? Есть один ребенок.',
         pinyin: 'Nǐ jiějie yǒu háizi ma? Yǒu yíge.',
-        chars: '',
+        chars: '你 __ _ __ _? _ __.',
     },
 
     {
         id: '15-11',
         ru: 'У тебя есть книги на китайском языке? Есть несколько.',
         pinyin: 'Nǐ yǒu méiyǒu hànyǔ shū? Yǒu jǐběn.',
-        chars: '',
+        chars: '你 _ __ __ _? _ __.',
     },
 
     {
         id: '15-12',
         ru: 'Где мой журнал? Там.',
         pinyin: 'Wǒde zázhì zaì nǎr? Nàr.',
-        chars: '',
+        chars: '我_ __ _ __? __.',
     },
 
     {
@@ -787,28 +791,28 @@ module.exports = [
         ru:
             'Что преподает вам учитель Ван? Он преподает нам китайский язык. А еще он преподает китайскую иероглифику.',
         pinyin: 'Wáng lǎoshī jiāo nǐmen shénme? Tā jiāo wǒmen hànyǔ. Tā hái jiāo hànzì.',
-        chars: '',
+        chars: '_ __ _ 你_ __? 他 _ 我_ __. 他 _ _ __.',
     },
 
     {
         id: '15-14',
         ru: 'О чем он тебя спросил? Он спросил меня, как зовут нашего преподавателя.',
         pinyin: 'Tā wèn nǐ shénme? Tā wèn wǒ, wǒmende lǎoshī jiào shénme?',
-        chars: '',
+        chars: '他 _ 你 _? 他 _ 我, 我__ __ _ __?',
     },
 
     {
         id: '15-15',
         ru: 'Ваша библиотека новая? Новая.',
         pinyin: 'Wǒde túshūguǎn xīn ma? Xīn.',
-        chars: '',
+        chars: '我_ ___ _ _? _.',
     },
 
     {
         id: '15-16',
         ru: 'Какие журналы ты берешь в библиотеке? Я беру новые журналы.',
         pinyin: 'Nǐ zaì túshūguǎn jiè nǎxīe zázhì? Wǒ jiè xīn zázhì.',
-        chars: '',
+        chars: '你 _ ___ _ __ __? 我 _ _ __.',
     },
 
     {
@@ -816,14 +820,14 @@ module.exports = [
         ru:
             'Где ты учишься? Я учусь в Институте иностранных языков на факультете китайской филологии.',
         pinyin: 'Nǐ xuéxí nǎr? Wǒ zaì Wàiyǔ xuéyuànde Zhōngwén xì xuéxí.',
-        chars: '',
+        chars: '你 __ _? 我 _ __ ___ __ _ __.',
     },
 
     {
         id: '15-18',
         ru: 'Он не преподает нам грамматику, он преподает нам разговорный язык. ',
         pinyin: 'Tā bù jiāo wǒmen yǔfǎ. Tā jiāo wǒmen kǒuyǔ.',
-        chars: '',
+        chars: '他 _ _ 我_ __. 他 _ 我_ __.',
     },
 
     {
@@ -831,35 +835,35 @@ module.exports = [
         ru:
             'Сколько человек в твоей семье? Четверо: папа, мама, старший брат и я. Брат и я — студенты.',
         pinyin: 'Nǐ jiā yǒu jǐge rén? Sìge: bàba, māma, gēge hé wǒ. Gēge hé wǒ dōu shì xuésheng.',
-        chars: '',
+        chars: '你 _ _ __ _? __: __, __, __ _ 我. __ _ 我 _ 是 __.',
     },
 
     {
         id: '15-20',
         ru: 'Он китаец. Он часто помогает друзьям учить китайские иероглифы.',
         pinyin: 'Tā shì Zhōngguórén. Tā cháng cháng bāngzhù péngyou xuéxí hànzì.',
-        chars: '',
+        chars: '他 是 ___. 他 _ _ __ __ __ __.',
     },
 
     {
         id: '15-21',
         ru: 'Я с ним не знаком. Познакомь нас, пожалуйста.',
         pinyin: 'Wǒ bù rènshi tā. Qǐng gěi wǒmen jìeshao yíxiàr.',
-        chars: '',
+        chars: '我 _ __ 他. _ _ 我_ __ ___.',
     },
 
     {
         id: '15-22',
         ru: 'Чья это машина? Это машина мужа.',
-        pinyin: 'Zhè shì shéide chē. Zhè shì zhāngfude chē.',
-        chars: '',
+        pinyin: 'Zhè shì shéide chē? Zhè shì zhāngfude chē.',
+        chars: '_ 是 __ _? _ 是 ___ _.',
     },
 
     {
         id: '15-23',
         ru: 'Они не все заняты. Пригласи их вьпить чаю.',
         pinyin: 'Tāmen bù dōu máng. Qǐng tāmen hē chá.',
-        chars: '',
+        chars: '__ _ _ _. _ 他_ _ _.',
     },
 
     {
@@ -874,7 +878,7 @@ module.exports = [
         ru:
             'В читальном зале нашего института нет книг на китайском языке, есть в читальном зале Института иностранных языков.',
         pinyin: 'Wǒmen xuéyuànde yuèlǎnshì méiyǒu hànyǔ shū, Wàiyǔ xuéyuànde yuèlǎnshì yǒu.',
-        chars: '',
+        chars: '我_ ___ ___ __ __ _, __ ___ ___ _.',
     },
 
     {
@@ -883,6 +887,7 @@ module.exports = [
             'Сколько у вас преподавателей-иностранцев на факультете? Из каких они стран? На факультете 25 преподавателей-иностранцев. Есть англичане, китайцы, японцы, французы.',
         pinyin:
             'Nǐmen xì yǒu jǐge wàiguó lǎoshī? Tāmen shì nǎguó rén? Xì yǒu èrshíwǔ lǎoshī. Yǒu  yīngguórén, zhōngguórén, rìběnrén, fǎguórén.',
+        chars: '你_ _ _ __ __ __? __ 是 __ _? _ _ ___ __. _ ___, ___, ___, ___.',
     },
 
     {
@@ -891,6 +896,7 @@ module.exports = [
             'У тебя есть китайско-русский словарь? Есть два словаря: один большой и один маленький. Который из них тебе нужен? Дай мне маленький.',
         pinyin:
             'Nǐ yǒu méiyǒu hàn-é cídiǎn? Yǒu liǎngběn: yīběn dà, yīběn xiǎo. Nǐ yào nǎběn? Gěi wǒ yīběn xiǎo de.',
+        chars: '你 _ __ _-_ __? _ __: __ _, __ _. 你 _ __? _ 我 __ _ _.',
     },
 
     {
@@ -899,6 +905,7 @@ module.exports = [
             'У меня есть друг. Он китайский студент, изучает русский язык, учится на филологическом факультете. Мы учимся друг у друга.',
         pinyin:
             'Wǒ yǒu yīge péngyou. Tā shì Zhōngguó xuésheng, xué éyǔ, zaì yǔyánxì xuéxí. Wǒmen hùxiāng xuéxí.',
+        chars: '我 _ __ __. 他 是 __ __, _ __, _ ___ __. 我_ __ __.',
     },
 
     {
@@ -907,20 +914,21 @@ module.exports = [
             'Мой старший брат сейчас учится в Англии. Он очень скучает по родителям, часто пишет им письма, передает привет своим друзьям.',
         pinyin:
             'Wǒ gēge zaì Yīngguó xuéxí. Tā hěn xiǎng fùmǔ, cháng gěi tāmen xiě xìn, wèn tā péngyou hǎo.',
+        chars: '我 __ _ __ __. 他 _ _ __, _ _ 他_ _ _, _ 他 __ _.',
     },
 
     {
         id: '15-30',
         ru: 'Я не беру книги в библиотеке. Я покупаю их в магазине.',
         pinyin: 'Wǒ bù zaì túshūguǎn jiè shū. Wǒ zaì shāndiàn mǎi tāmen.',
-        chars: '',
+        chars: '我 _ _ ___ _ _. 我 _ __ _ 他_.',
     },
 
     {
         id: '15-31',
         ru: 'О чем ты будешь спрашивать преподавателя? Я спрошу его о новых словах.',
         pinyin: 'Nǐ wèn lǎoshī shénme? Wǒ wèn tā shēngcí.',
-        chars: '',
+        chars: '你 _ __ __? 我 _ 他 __.',
     },
 
     {
@@ -936,27 +944,28 @@ module.exports = [
             'Здесь две рубашки. Которая из них твоя? Моя рубашка белая, а та зеленая — моего старшего брата.',
         pinyin:
             'Zhèr yǒu liǎng jiàn chènshān. Nǎ jiàn shì nǐde? Wǒde shì báide, nàjiàn lùde shì wǒ gēgede.',
+        chars: '__ _ _ _ __. _ _ 是 你_? 我_ 是 __, __ __ 是 我 ___.',
     },
 
     {
         id: '16-02',
         ru: 'У кого билеты на пекинскую оперу? У нашего преподавателя китайского языка.',
         pinyin: 'Jīngjù piào zaì shéi nǎr? Zaì wǒmen hànyǔ lǎoshī nàr.',
-        chars: '',
+        chars: '__ _ _ _ __? _ 我_ __ __ __.',
     },
 
     {
         id: '16-03',
         ru: 'Откуда вы пойдете в театр? Мы пойдем в театр из института.',
         pinyin: 'Nǐmen cóng nǎr qù jùchǎng. Wǒmen cóng xuéyuàn qù jùchǎng.',
-        chars: '',
+        chars: '你_ _ _ _ __. 我_ _ __ _ __.',
     },
 
     {
         id: '16-04',
         ru: 'Это твоя рубашка? Нет, моя рубашка белая, а не зеленая.',
         pinyin: 'Zhè shì nǐde chènshān ma? Bù, wǒde chènshān bái, bù shì lùde.',
-        chars: '',
+        chars: '_ 是 你_ __ _? _, 我_ __ _, _ _ __.',
     },
 
     {
@@ -964,14 +973,14 @@ module.exports = [
         ru:
             'У меня два журнала на китайском языке: один — новый, один — старый. Какой (из них) тебе нужен?',
         pinyin: 'Wǒ yǒu liǎngběn hànyǔ zázhì: yīběn xīn, yīběn jiù. Nǐ yào nǎyìběn?',
-        chars: '',
+        chars: '我 _ __ __ __: __ _, __ _. 你 _ ___?',
     },
 
     {
         id: '16-06',
         ru: 'Куда вы пойдете вечером?',
         pinyin: 'Wǎnshang nǐmen qù nǎr?',
-        chars: '',
+        chars: '__ 你_ _ __?',
     },
 
     {
@@ -979,7 +988,7 @@ module.exports = [
         ru:
             'Откуда ты пойдешь в библиотеку? Из института? Я пойду из общежития, а не из института.',
         pinyin: 'Nǐ cóng nǎr qù túshūguǎn? Cóng xuéyuàn ma? Wǒ cóng sùshè qù, bù cóng xuéyuàn qù.',
-        chars: '',
+        chars: '你 _ _ _ ___? _ __ _? 我 _ __ _, _ _ __ _.',
     },
 
     {
@@ -987,14 +996,14 @@ module.exports = [
         ru:
             'Что ты ему возвращаешь? Я возвращаю ему два словаря: один — англо-русский, другой — китайско-французский.',
         pinyin: 'Nǐ huán tā shénme? Wǒ huán tā liǎngběn cídiǎn: yīběn yīng-é, yīběn hàn-fǎ.',
-        chars: '',
+        chars: '你 _ 他 __? 我 _ 他 __ __: __ _-_, __ _-_.',
     },
 
     {
         id: '16-09',
         ru: 'Я дам ему два пиджака: один — черный, другой — белый.',
         pinyin: 'Wǒ gěi tā liǎng jiàn shàngyī: yījiàn hēi, yījiàn bái.',
-        chars: '',
+        chars: '我 _ 他 _ _ __: __ _, __ _.',
     },
 
     {
@@ -1003,76 +1012,77 @@ module.exports = [
             'Чьи эти три пальто? Два пальто — моих друзей и одно — мое. А какое из них твое? Мое — черное.',
         pinyin:
             'Zhè sān jiàn dàyī shì shéide? Liǎng jiàn dàyī shì wǒ péngyoude, yījiàn shì wǒde. Nǎjiàn shì nǐde? Wǒde shì hēide.',
+        chars: '_ _ _ __ 是 __? _ _ __ 是 我 ___, __ 是 我_. __ 是 你_? 我_ 是 __.',
     },
 
     {
         id: '16-11',
         ru: 'Откуда ты пришел? Я пришел из библиотеки.',
         pinyin: 'Nǐ cóng nǎr lái? Wǒ cóng túshūguǎn lái.',
-        chars: '',
+        chars: '你 _ _ _? 我 _ ___ _.',
     },
 
     {
         id: '16-12',
         ru: 'Что ты ему дашь? Я дам ему две карты: карту Китая и карту России.',
         pinyin: 'Nǐ gěi tā shénme? Wǒ gěi tā liǎng zhāng dìtú: Zhōngguó dìtú hé Éguó dìtú.',
-        chars: '',
+        chars: '你 _ 他 __? 我 _ 他 _ _ __: __ __ _ __ __.',
     },
 
     {
         id: '16-13',
         ru: 'Где мое письмо? Твое письмо у преподавателя Вана. Он тебя искал. Но тебя не было.',
         pinyin: 'Wǒde xìn zaì nǎr? Nǐde xìn zaì Wáng lǎoshī nàr. Tā zhǎo nǐ le. Nǐ bù zaì.',
-        chars: '',
+        chars: '我_ _ _ _? 你_ _ _ _ __ _. 他 _ 你 _. 你 _ _.',
     },
 
     {
         id: '16-14',
         ru: 'В нашем институте три читальных зала: два новых и один старый.',
         pinyin: 'Wǒmende xuéyuàn yǒu sānge yuèlǎnshì: liǎngge xīn hé yīge jiù.',
-        chars: '',
+        chars: '我__ __ _ __ ___: __ _ _ __ _.',
     },
 
     {
         id: '16-15',
         ru: 'Эта книга не моя, она из библиотеки.',
         pinyin: 'Zhèběn shū bù shì wǒde, tā shì túshūguǎnde.',
-        chars: '',
+        chars: '__ _ _ 是 我_, 她 是 ____.',
     },
 
     {
         id: '16-16',
         ru: 'Приходите вечером ко мне на чай. Спасибо.',
         pinyin: 'Wǎnshang lái wǒ jiā hē chá. Xìexie.',
-        chars: '',
+        chars: '__ _ 我 _ _ _. __.',
     },
 
     {
         id: '16-17',
         ru: 'У него много книг на английском языке. Я часто беру у него книги почитать.',
         pinyin: 'Tā yǒu hěn duō yīngyǔ shū. Wǒ cháng cháng jiè tāde shū.',
-        chars: '',
+        chars: '他 _ _ _ __ _. 我 _ _ _ 他_ _.',
     },
 
     {
         id: '16-18',
         ru: 'Я не надену ту старую рубашку, я надену эту новую.',
         pinyin: 'Wǒ bù chuān nà jiàn jiùde chènshān, wǒ chuān zhè jìan xīnde.',
-        chars: '',
+        chars: '我 _ _ _ _ __ __, 我 _ _ _ __.',
     },
 
     {
         id: '16-19',
         ru: 'Что ты ищешь? Я ищу свою ручку. Твоя ручка у меня (здесь). Возвращаю её тебе.',
         pinyin: 'Nǐ zhǎo shénme? Wǒ zhǎo wǒde bǐ. Nǐde bǐ zài wǒ zhèr. Huán nǐ.',
-        chars: '',
+        chars: '你 _ __? 我 _ 我_ _. 你_ _ _ 我 __. _ 你.',
     },
 
     {
         id: '16-20',
         ru: 'Книга по английской грамматике не на английском языке, а на русском.',
         pinyin: 'Yīngyǔ yǔfǎ shū bù shì yīngyǔde, shì éyǔde.',
-        chars: '',
+        chars: '__ __ _ _ 是 ___, 是 ___.',
     },
 
     {
@@ -1080,21 +1090,21 @@ module.exports = [
         ru:
             'Я покупаю билеты на пекинскую оперу старшей сестре и жене. Они обе любят пекинскую оперу.',
         pinyin: 'Wǒ gěi jiějie hé qīzi mǎi Jīngjù piào. Tāmen liǎ dōu xǐhuan Jīngjù.',
-        chars: '',
+        chars: '我 _ __ _ __ _ __ _. __ _ _ __ __.',
     },
 
     {
         id: '16-22',
         ru: 'Он живет не в Пекине, а в Шанхае.',
         pinyin: 'Tā bù zhù Běijīng, zhù Shànghǎi.',
-        chars: '',
+        chars: '他 _ _ __, _ __.',
     },
 
     {
         id: '16-23',
         ru: 'Наши места не здесь, (а) там.',
         pinyin: 'Wǒmende zuòwèi bù zài zhèr, zaì nàr. ',
-        chars: '',
+        chars: '我__ __ _ _ __, _ _.',
     },
 
     {
@@ -1110,6 +1120,7 @@ module.exports = [
             'Кто вам нужен (кого вы ищете)? Мне нужен иностранный студент Ван. Он живет не на двадцатом, а на девятнадцатом этаже.',
         pinyin:
             'Nǐ zhǎo shéi? Wǒ zhǎo yīge liúxuésheng xìng Wáng. Tā bù zhù èrshí céng, zhù shíjiǔ céng.',
+        chars: '你 _ _? 我 _ __ ___ _ _. 他 _ _ __ _, _ __ _.',
     },
 
     {
@@ -1118,6 +1129,7 @@ module.exports = [
             'Сколько студентов на вашем факультете? На нашем факультете 36 студентов. 30 русских студентов и 6 иностранных.',
         pinyin:
             'Nǐmen xì yǒu duōshao xuésheng? Wǒmen xì yǒu sānshíliùge xuésheng. Sānshíge éguó liúxuésheng hé liúge wàiguó liúxuésheng.',
+        chars: '你_ _ _ __ __? 我_ _ _ ____ __. ___ __ ___ _ __ __ ___.',
     },
 
     {
@@ -1126,6 +1138,7 @@ module.exports = [
             'Их семья состоит из двух человек. Муж — инженер, жена — врач. Давай я тебя с ними познакомлю.',
         pinyin:
             'Tāmen jiā yǒu liǎngge rén. Zhàngfu gōngchéngshī, qīzi shì dàifu. Lái wǒ gěi nǐ jièshao yíxiàr.',
+        chars: '__ _ _ __ _. __ ___, __ 是 __. _ 我 _ 你 __ ___.',
     },
 
     {
@@ -1139,56 +1152,56 @@ module.exports = [
         id: '16-29',
         ru: 'У моего приятеля три авторучки, пять тетрадей, четыре газеты на китайском языке.',
         pinyin: 'Wǒ péngyou yǒu sānzhī bǐ, wǔge běnzi, sìběn hànyǔ baò.',
-        chars: '',
+        chars: '我 __ _ __ _, __ __, __ __ _.',
     },
 
     {
         id: '16-30',
         ru: 'Я возьму в библиотеке два словаря: один русско-китайский, один — китайско-русский.',
         pinyin: 'Wǒ zài túshūguǎn liǎngběn cídiǎn: yīběn é-hàn, yīběn hàn-é.',
-        chars: '',
+        chars: '我 _ ___ __ __: __ _-_, __ _-_.',
     },
 
     {
         id: '25-1',
         ru: 'Как тебе спалось сегодня? Плохо. Вчера вечером съел слишком много пельменей.',
         pinyin: 'Nǐ jīntiān shùi de hǎo ma? Bù hǎo. Zuótiān wǎnshang chī de hěn duō jiǎozi.',
-        chars: '',
+        chars: '你 __ _ _ _ _? _ _. __ __ _ _ _ _ __.',
     },
 
     {
         id: '25-2',
         ru: 'Ты читал текст довольно медленно, тебе надо еще раз его прочитать.',
         pinyin: 'Nǐ niàn kèwén niàn de hěn màn. Nǐ yīnggāi zài niàn yībiàn.',
-        chars: '',
+        chars: '你 _ __ _ _ _ _. 你 __ _ _ __.',
     },
 
     {
         id: '25-3',
         ru: 'Он много курит, не занимается спортом, и здоровье у него неважное.',
         pinyin: 'Tā xī hěn duō yān, bú duànliàn, tā shēntǐ bú jiànkāng.',
-        chars: '',
+        chars: '他 _ _ _ _, _ __, 他 __ _ __.',
     },
 
     {
         id: '25-4',
         ru: 'Пошли купаться. Подожди, ты видишь - я ловлю рыбу.',
         pinyin: 'Qù yóu yǒng ba. Děng yī děng, nǐ kàn - wǒ zài diào yú ne.',
-        chars: '',
+        chars: '_ _ _ _. _ _ _, 你 _ - 我 _ _ _ _.',
     },
 
     {
         id: '25-5',
         ru: 'Как он говорит по-китайски? Он говорит бегло.',
         pinyin: 'Tā shūo hànyǔ shūo de hǎo ma? Tā shūo de liúlì.',
-        chars: '',
+        chars: '他 _ __ _ _ _ _? 他 _ _ __.',
     },
 
     {
         id: '25-6',
         ru: 'Что ты будешь есть? Я съем немного ветчины и сыра, выпью немного минеральной воды.',
         pinyin: 'Nǐ chī shénme? Wǒ chī yìdiǎnr huǒtuǐ hé nǎilào, hē yìdiǎnr kuàngquánshuǐ.',
-        chars: '',
+        chars: '你 _ __? 我 _ ___ __ _ __, _ ___ ___.',
     },
 
     {
@@ -1197,13 +1210,14 @@ module.exports = [
             'Посмотри, как аккуратно он убрал комнату. Завтра у него день рождения. Приедут его родители.',
         pinyin:
             'Nǐ kàn, tā zhěnglǐ fángjiān zhěnglǐ de hěn zhěngqí. Míngtiān shì tāde shēngrì. Tā fùmǔ lái.',
+        chars: '你 _, 他 __ __ __ _ _ __. __ 是 他_ __. 他 __ _.',
     },
 
     {
         id: '25-8',
         ru: 'Народные песни очень хорошо поёт моя бабушка, попроси её спеть.',
         pinyin: 'Wǒ nǎinai chàng míngè chàng de hěn hǎo, ràng tā chàng.',
-        chars: '',
+        chars: '我 __ _ __ _ _ _ _, _ 她 _.',
     },
 
     {
@@ -1212,6 +1226,7 @@ module.exports = [
             'Она готовится добросовестно. На занятиях правильно отвечает на вопросы преподавателя, пишет аккуратно, читает четко.',
         pinyin:
             'Tā zhǔnbèi de rènzhēn. Shàngkè shí (de shíhou) huídá lǎoshīde wèntí huídá de búcuò, xiě de zhěngqí, niàn de qīngchu.',
+        chars: '她 __ _ __. __ _ (_ __) __ ___ __ __ _ __, _ _ __, _ _ __.',
     },
 
     {
@@ -1225,35 +1240,35 @@ module.exports = [
         id: '25-11',
         ru: 'Этот профессор говорит очень четко, я все понимаю.',
         pinyin: 'Zhè wèi jiàoshòu shūo de hěn qīngchu, wǒ dōu dǒng.',
-        chars: '',
+        chars: '_ _ __ _ _ _ __, 我 _ _.',
     },
 
     {
         id: '25-12',
         ru: 'Съешьте ещё немного супа. Его приготовила моя мама.',
         pinyin: 'Zài chī yìdiǎnr tāng ba, shì wǒ māma zuò de.',
-        chars: '',
+        chars: '_ _ ___ _ _, 是 我 __ _ _.',
     },
 
     {
         id: '25-13',
         ru: 'Она очень хорошо танцует, попроси её потанцевать ещё.',
         pinyin: 'Tā tiàowǔ tiào de hěn hǎo, ràng tā tiào yībiàn.',
-        chars: '',
+        chars: '她 __ _ _ _ _, _ 她 _ __.',
     },
 
     {
         id: '25-14',
         ru: 'Он неплохо ловит рыбу. Когда поедем за город, сварим уху из рыбы, которую он поймает.',
         pinyin: 'Tā diàoyú diào de búcuò. Wǒmen qù chéngwài yòng tā diào de yú zuò yútāng.',
-        chars: '',
+        chars: '他 __ _ _ __. 我_ _ __ _ 他 _ _ _ _ __.',
     },
 
     {
         id: '25-15',
         ru: 'Простите, я пришел слишком поздно. Ничего, билеты еще есть.',
         pinyin: 'Duìbùqǐ, wǒ lái de tài wǎn le. Méiguānxi, hái yǒu pìao ne.',
-        chars: '',
+        chars: '___, 我 _ _ _ _ _. ___, _ _ _ _.',
     },
 
     {
@@ -1267,28 +1282,28 @@ module.exports = [
         id: '25-17',
         ru: 'Этот преподаватель тоже хорошо преподаёт грамматику. Сходи на его занятия, послушай.',
         pinyin: 'Zhège lǎoshī jiāo yǔfǎ yě jiāo de hěn hǎo. Shàng tāde kè tīng yī tīng.',
-        chars: '',
+        chars: '__ __ _ __ _ _ _ _ _. _ 他_ _ _ _ _.',
     },
 
     {
         id: '25-18',
         ru: 'Когда мы ходили гулять в парк, он был легко одет.',
         pinyin: 'Wǒmen qù gōngyuán wánr de shíhou, tā chuān de bù duō.',
-        chars: '',
+        chars: '我_ _ __ __ _ __, 他 _ _ _ _.',
     },
 
     {
         id: '25-19',
         ru: 'Он водит машину слишком быстро. Я не поеду на его машине.',
         pinyin: 'Tā kāi chē kāi de tài kuài. Wǒ bù zuò tāde chē.',
-        chars: '',
+        chars: '他 _ _ _ _ _ _. 我 _ _ 他_ _.',
     },
 
     {
         id: '25-20',
         ru: 'Ты абсолютно прав. Я непременно прочитаю эту интересную книгу.',
         pinyin: 'Nǐ shūo de hěn duì. Wǒ yídìng kàn zhèběn yǒu yìsi de shū.',
-        chars: '',
+        chars: '你 _ _ _ _. 我 __ _ __ _ __ _ _.',
     },
 
     {
@@ -1297,20 +1312,21 @@ module.exports = [
             'Он много читает и очень интересно рассказывает об истории Великой китайской стены. Побеседуй с ним.',
         pinyin:
             'Tā kàn de hěn duō. Tā jìeshao Chángchéng de lìshǐ jìeshao de hěn yǒu yìsi. Gēn tā tántan.',
+        chars: '他 _ _ _ _. 他 __ __ _ __ __ _ _ _ __. _ 他 __.',
     },
 
     {
         id: '25-22',
         ru: 'Как он плавает? Он плавает медленно.',
-        pinyin: 'Tā yóu de zěnmeyàng. Tā yóu de màn.',
-        chars: '',
+        pinyin: 'Tā yóu de zěnmeyàng? Tā yóu de màn.',
+        chars: '他 _ _ ___? 他 _ _ _.',
     },
 
     {
         id: '25-23',
         ru: 'Он пьёт много молока. Он любит пить молоко.',
         pinyin: 'Tā hē de niúnǎi hěn duō. Tā xǐhuan hē niúnǎi.',
-        chars: '',
+        chars: '他 _ _ __ _ _. 他 __ _ __.',
     },
 
     {
@@ -1324,14 +1340,14 @@ module.exports = [
         id: '25-25',
         ru: 'Эти иероглифы написаны преподавателем Ваном, а те мной. Сравни их.',
         pinyin: 'Zhè xiě hànzi shì Wáng lǎoshī xiě de, nè xiě shì wǒ xiě de. Bǐ yì bǐ.',
-        chars: '',
+        chars: '_ _ __ 是 _ __ _ _, _ _ 是 我 _ _. _ _ _.',
     },
 
     {
         id: '25-26',
         ru: 'Он плавает не очень хорошо. Пусть у тебя поучится.',
         pinyin: 'Tā yóu de bù tài hǎo. Ràng tā gēn nǐ xué.',
-        chars: '',
+        chars: '他 _ _ _ _ _. _ 他 _ 你 _.',
     },
 
     {
@@ -1340,6 +1356,7 @@ module.exports = [
             'Что ты собираешься делать? Собираюсь делать пельмени. Ты хорошо делаешь пельмени? Что ты, я делаю не очень хорошо. Рассчитываю на твою помощь.',
         pinyin:
             'Nǐ zhǔnbeì zuò shénme? Zhǔnbeì bāo jiǎozi. Nǐ bāo de hǎo bù hǎo? Nǎli, wǒ bāo de bù hěn hǎo. Ràng nǐ bāngzhù wǒ.',
+        chars: '你 __ _ __? __ _ __. 你 _ _ _ _ _? __, 我 _ _ _ _ _. _ 你 __ 我.',
     },
 
     {
@@ -1348,6 +1365,7 @@ module.exports = [
             'Ты знаешь, где хорошо шьют блузки? Моя мама может порекомендовать тебе одно место. Спроси её. Она часто заказывает там юбки и блузки.',
         pinyin:
             'Nǐ zhīdào chènshān zài nǎr zuò de hǎo? Wǒ māma néng gàosu nǐ yījiā. Wèn tā. Tā cháng zài nàr mǎi qúnzi hé chènshān.',
+        chars: '你 __ __ _ _ _ _ _? 我 __ _ __ 你 __. _ 她. _ _ _ _ _ __ _ __.',
     },
 
     {
@@ -1356,6 +1374,7 @@ module.exports = [
             'Тот преподаватель, который приехал из Китая, преподаёт историю или современный китайский язык? Я не знаю, я не учусь на этом факультете.',
         pinyin:
             'Nàgè cóng Zhōngguó lái de lǎoshī jiāo lìshǐ háishi xiàndài hànyǔ? Wǒ bù zhīdào, wǒ bù zài zhègè xì xuéxí.',
+        chars: '__ _ __ _ _ __ _ __ __ __ __? 我 _ __, 我 _ _ __ _ __.',
     },
 
     {
