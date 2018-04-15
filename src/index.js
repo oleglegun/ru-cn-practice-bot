@@ -18,8 +18,8 @@ const shuffle = require('lodash.shuffle')
  * @property {string} activeQuestionId
  * @property {Array<string>} questions Ids of remaining questions.
  * @property {Array<string>} wrongAnswers
- * @property {Array<string>} hintPosition
- * @property {number} hintUseCount
+ * @property {number} hintsUsed
+ * @property {number} hintsUsedTotal
  * @property {string} answerMode `pinyin`/`chars`
  */
 
@@ -35,7 +35,7 @@ const bot = new TelegramBot(token, { polling: true })
 
 const keyboards = {
     home: [['▶️ Start'], ['ℹ Statistics'], ['🔠 Settings']],
-    show_answer: [['❓ Show Hint'], ['🆘 Show answer'], ['↩️ Home']],
+    show_answer: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
     rate: [['✅ Correct', '❌ Wrong'], ['↩️ Home']],
     settings: {
         pinyin: [['🔄 Mode: Pinyin'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
@@ -53,7 +53,8 @@ bot.onText(/\/start/, (msg, match) => {
         wrongAnswers: [],
         answerMode: 'pinyin',
         activeQuestionId: '',
-        hintUseCount: 0,
+        hintsUsed: 0,
+        hintsUsedTotal: 0,
     }
 
     bot.sendMessage(chatId, 'Welcome to the Russian-Chinese Practice!', {
@@ -96,19 +97,28 @@ bot.onText(/🆘 Show answer/, (msg, match) => {
 
     const user = users[chatId]
 
-    if (user.answerMode === 'chars') {
-        if (questions[user.activeQuestionId].chars.length !== 0) {
-            sendAnswer(chatId, 'chars')
-        } else {
-            sendAnswer(chatId, 'pinyin')
-        }
+    if (
+        user.answerMode === 'chars' &&
+        isCharsAnswerComplete(questions[user.activeQuestionId].chars)
+    ) {
+        sendAnswer(chatId, 'chars')
     } else {
         sendAnswer(chatId, 'pinyin')
     }
 })
 
+bot.onText(/❓ Show Hint/, (msg, match) => {
+    const chatId = msg.chat.id
+
+    const user = users[chatId]
+
+    bot.sendMessage(chatId, getHint(chatId), { reply_markup: { keyboard: keyboards.show_answer } })
+})
+
 bot.onText(/✅ Correct/, (msg, match) => {
     const chatId = msg.chat.id
+
+    updateLastAccess(chatId)
 
     incrementTodayProgress(chatId)
 
@@ -117,6 +127,8 @@ bot.onText(/✅ Correct/, (msg, match) => {
 
 bot.onText(/❌ Wrong/, (msg, match) => {
     const chatId = msg.chat.id
+
+    updateLastAccess(chatId)
 
     incrementTodayProgress(chatId)
 
@@ -158,6 +170,25 @@ bot.onText(/📛 Debug/, (msg, match) => {
     const chatId = msg.chat.id
 
     bot.sendMessage(chatId, JSON.stringify(users[chatId], null, 2), {
+        reply_markup: { keyboard: renderSettings(chatId) },
+    })
+})
+
+bot.onText(/⚠️ Reset/, (msg, match) => {
+    const chatId = msg.chat.id
+
+    const user = users[chatId]
+
+    users[chatId] = {
+        ...user,
+        todayProgress: 0,
+        questions: shuffle(Object.keys(questions)),
+        wrongAnswers: [],
+        activeQuestionId: '',
+        hintsUsed: 0,
+    }
+
+    bot.sendMessage(chatId, 'Progress reset successful.', {
         reply_markup: { keyboard: renderSettings(chatId) },
     })
 })
@@ -218,8 +249,8 @@ function sendAnswer(chatId, mode) {
             break
     }
 
-    // reset hint position
-    users[chatId].hintPosition = 0
+    // reset hint counter
+    users[chatId].hintsUsed = 0
 
     bot.sendMessage(chatId, answer, { reply_markup: { keyboard: keyboards.rate } })
 }
@@ -239,10 +270,51 @@ function renderStatistics(chatId) {
 Total progress: ${totalProgress}/${totalQuestions} (${correctPercent}%)
 Wrong answers: ${wrongAnswers}/${totalQuestions} (${wrongPercent}%)
 Correct/Wrong rate: ${correctWrongPercent}%
-Hints used: ${data.hintUseCount}`
+Hints used: ${data.hintsUsed}`
 }
 
-function getHint() {}
+function getHint(chatId) {
+    const user = users[chatId]
+    let hint
+
+    const question = questions[user.activeQuestionId]
+
+    if (user.answerMode === 'chars' && isCharsAnswerComplete(question.chars)) {
+        // 'chars' mode
+        hint = renderNextHint(question.chars, user.hintsUsed + 1)
+    } else {
+        // 'pinyin' mode
+        hint = renderNextHint(question.pinyin, user.hintsUsed + 1)
+    }
+
+    users[chatId].hintsUsed++
+    users[chatId].hintsUsedTotal++
+
+    return hint
+}
+
+/**
+ * Checks if the string with chinese characters is complete and ready to use.
+ * @param {string} chars
+ */
+function isCharsAnswerComplete(chars) {
+    return chars.indexOf('_') === -1
+}
+
+/**
+ *
+ * @param {string} answer
+ * @param {number} hintNumber
+ */
+function renderNextHint(answer, hintNumber) {
+    const parts = answer.split(' ')
+
+    if (hintNumber < parts.length) {
+        return parts.slice(0, hintNumber).join(' ')
+    } else {
+        return answer
+    }
+}
 
 function incrementTodayProgress(chatId) {
     const today = new Date()
@@ -265,4 +337,31 @@ function todayProgress(chatId) {
     } else {
         return 0
     }
+}
+
+function incrementTodayProgress(chatId) {
+    const today = new Date()
+    const lastAccess = users[chatId].lastAccess
+
+    if (today.getDate === new Date(lastAccess).getDate) {
+        users[chatId].todayProgress++
+    } else {
+        // no progress today
+        users[chatId].todayProgress = 0
+    }
+}
+
+function todayProgress(chatId) {
+    const today = new Date()
+    const lastAccess = users[chatId].lastAccess
+
+    if (today.getDate === new Date(lastAccess).getDate) {
+        return users[chatId].todayProgress
+    } else {
+        return 0
+    }
+}
+
+function updateLastAccess(chatId) {
+    users[chatId].lastAccess = Date()
 }

@@ -5,7 +5,7 @@ const keys = Object.keys(data)
 let words = ''
 
 keys.forEach(key => {
-    words += data[key].chinese
+    words += data[key].pinyin
 })
 
 words = words.replace(/[.,-?]/g, ' ')
