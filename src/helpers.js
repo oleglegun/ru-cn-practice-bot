@@ -1,14 +1,3 @@
-/**
- * @typedef {Object} Sentence
- * @property {string} Sentence.id
- * @property {string} Sentence.russian
- * @property {string} Sentence.chinese
- */
-
-/**
- *
- * @param {Array<Sentence>} arr
- */
 const arrToObject = function(arr) {
     const obj = {}
 
