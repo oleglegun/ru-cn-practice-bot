@@ -2021,7 +2021,7 @@
         "ru":
             "Здесь две рубашки. Которая из них твоя? Моя рубашка белая, а та зеленая — моего старшего брата.",
         "pinyin":
-            "Zhèr yǒu liǎng jiàn chènshān. Nǎ jiàn shì nǐde? Wǒde shì báide, nàjiàn lùde shì wǒ gēgede.",
+            "Zhèr yǒu liǎng jiàn chènshān. Nǎ jiàn shì nǐde? Wǒde shì báide, nàjiàn lǜde shì wǒ gēgede.",
         "cn": [
             ["Zhèr", "这儿"],
             ["yǒu", "有"],
@@ -2036,7 +2036,7 @@
             ["shì", "是"],
             ["báide,", ""],
             ["nàjiàn", ""],
-            ["lùde", ""],
+            ["lǜde", ""],
             ["shì", "是"],
             ["wǒ", "我"],
             ["gēgede.", ""]
@@ -2079,7 +2079,7 @@
     {
         "id": "16-04",
         "ru": "Это твоя рубашка? Нет, моя рубашка белая, а не зеленая.",
-        "pinyin": "Zhè shì nǐde chènshān ma? Bù, wǒde chènshān bái, bù shì lùde.",
+        "pinyin": "Zhè shì nǐde chènshān ma? Bù, wǒde chènshān bái, bù shì lǜde.",
         "cn": [
             ["Zhè", "这"],
             ["shì", "是"],
@@ -2092,7 +2092,7 @@
             ["bái,", ""],
             ["bù", "不"],
             ["shì", "是"],
-            ["lùde.", ""]
+            ["lǜde.", ""]
         ]
     },
     {

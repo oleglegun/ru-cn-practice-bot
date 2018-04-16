@@ -1,15 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api')
 const { arrToObject } = require('./helpers')
-const data = require('../db/data')
+const questions = require('../db/data')
 const shuffle = require('lodash.shuffle')
-
-/**
- * @typedef {Object} Question
- * @property {string} id
- * @property {string} ru
- * @property {string} pinyin
- * @property {string} chars
- */
 
 /**
  * @typedef {Object} User
@@ -26,20 +18,18 @@ const shuffle = require('lodash.shuffle')
 /** @type {Object<string,User>} */
 const users = {}
 
-/** @type {Object<string,Question>} */
-const questions = arrToObject(data)
-
 const token = process.env['TG_TOKEN']
 
 const bot = new TelegramBot(token, { polling: true })
 
 const keyboards = {
-    home: [['▶️ Start'], ['ℹ Statistics'], ['🔠 Settings']],
+    home: [['▶️ Start'], ['ℹ Statistics'], ['⚙️ Settings']],
     show_answer: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
     rate: [['✅ Correct', '❌ Wrong'], ['↩️ Home']],
     settings: {
         pinyin: [['🔄 Mode: Pinyin'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
         chars: [['🔄 Mode: 汉字'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
+        both: [['🔄 Mode: Pinyin + 汉字'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
     },
 }
 
@@ -97,14 +87,9 @@ bot.onText(/🆘 Show answer/, (msg, match) => {
 
     const user = users[chatId]
 
-    if (
-        user.answerMode === 'chars' &&
-        isCharsAnswerComplete(questions[user.activeQuestionId].chars)
-    ) {
-        sendAnswer(chatId, 'chars')
-    } else {
-        sendAnswer(chatId, 'pinyin')
-    }
+    const answer = renderAnswer(questions[user.activeQuestionId].cn, user.answerMode)
+
+    sendAnswer(chatId, answer)
 })
 
 bot.onText(/❓ Show Hint/, (msg, match) => {
@@ -140,11 +125,12 @@ bot.onText(/❌ Wrong/, (msg, match) => {
 bot.onText(/🔄 Mode:/, (msg, match) => {
     const chatId = msg.chat.id
 
-    if (users[chatId].answerMode === 'pinyin') {
-        users[chatId].answerMode = 'chars'
-    } else {
-        users[chatId].answerMode = 'pinyin'
-    }
+    const modes = ['pinyin', 'chars', 'both']
+
+    const currentModeIdx = modes.indexOf(users[chatId].answerMode)
+
+    users[chatId].answerMode =
+        currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
     bot.sendMessage(chatId, 'Answer mode changed.', {
         reply_markup: { keyboard: renderSettings(chatId) },
@@ -158,7 +144,7 @@ bot.onText(/↩️ Home/, (msg, match) => {
         reply_markup: { keyboard: keyboards.home },
     })
 })
-bot.onText(/🔠 Settings/, (msg, match) => {
+bot.onText(/⚙️ Settings/, (msg, match) => {
     const chatId = msg.chat.id
 
     bot.sendMessage(chatId, 'Settings', {
@@ -188,10 +174,22 @@ bot.onText(/⚠️ Reset/, (msg, match) => {
         hintsUsed: 0,
     }
 
-    bot.sendMessage(chatId, 'Progress reset successful.', {
+    bot.sendMessage(chatId, 'All your progress has been reset.', {
         reply_markup: { keyboard: renderSettings(chatId) },
     })
 })
+
+/**
+ *
+ * @param {string} chatId
+ * @param {string} answer
+ */
+function sendAnswer(chatId, answer) {
+    // reset hint counter
+    users[chatId].hintsUsed = 0
+
+    bot.sendMessage(chatId, answer, { reply_markup: { keyboard: keyboards.rate } })
+}
 
 // bot.on('message', msg => {
 //     const chatId = msg.chat.id
@@ -224,41 +222,56 @@ function sendNextQuestion(chatId) {
     })
 }
 
+/*-----------------------------------------------------------------------------
+ *  Render functions
+ *----------------------------------------------------------------------------*/
+
 function renderSettings(chatId) {
-    if (users[chatId].answerMode === 'pinyin') {
-        return keyboards.settings.pinyin
-    } else {
-        return keyboards.settings.chars
-    }
+    return keyboards.settings[users[chatId].answerMode]
 }
 
 /**
  *
- * @param {string} chatId
- * @param {string} mode `pinyin`/`chars`
+ * @param {Array<Array<string>>} answer
+ * @param {string} answerMode
+ * @param {number} [length]
  */
-function sendAnswer(chatId, mode) {
-    let answer
-    switch (mode) {
-        case 'pinyin':
-            answer = questions[users[chatId].activeQuestionId].pinyin
+function renderAnswer(answer, answerMode, length) {
+    if (!length) {
+        length = answer.length + 1
+    }
 
+    result = ''
+
+    switch (answerMode) {
+        case 'pinyin':
+            answer.slice(0, length).forEach(part => {
+                result += `${part[0]} `
+            })
             break
         case 'chars':
-            answer = questions[users[chatId].activeQuestionId].chars
+            answer.slice(0, length).forEach(part => {
+                // no char available - replace with pinyin
+                result += part[1] === '' ? `${part[0]} ` : `${part[1]} `
+            })
+            break
+        case 'both':
+            answer.slice(0, length).forEach(part => {
+                // no char available - only pinyin
+                result += part[1] === '' ? `${part[0]} ` : `${part[0]} (${part[1]}) `
+            })
             break
     }
 
-    // reset hint counter
-    users[chatId].hintsUsed = 0
-
-    bot.sendMessage(chatId, answer, { reply_markup: { keyboard: keyboards.rate } })
+    return result
 }
 
 function renderStatistics(chatId) {
     const data = users[chatId]
 
-    const totalQuestions = Object.keys(questions).length
+    const questionsCount = Object.keys(questions).length
+
+    const totalQuestions = data.activeQuestionId === '' ? questionsCount : questionsCount - 1
     const wrongAnswers = data.wrongAnswers.length
     const totalProgress = totalQuestions - data.questions.length - wrongAnswers
     const wrongPercent = parseInt(wrongAnswers / totalQuestions * 100)
@@ -275,17 +288,9 @@ Hints used: ${data.hintsUsed}`
 
 function getHint(chatId) {
     const user = users[chatId]
-    let hint
 
     const question = questions[user.activeQuestionId]
-
-    if (user.answerMode === 'chars' && isCharsAnswerComplete(question.chars)) {
-        // 'chars' mode
-        hint = renderNextHint(question.chars, user.hintsUsed + 1)
-    } else {
-        // 'pinyin' mode
-        hint = renderNextHint(question.pinyin, user.hintsUsed + 1)
-    }
+    const hint = renderNextHint(question.cn, user.hintsUsed + 1, user.answerMode)
 
     users[chatId].hintsUsed++
     users[chatId].hintsUsedTotal++
@@ -294,26 +299,17 @@ function getHint(chatId) {
 }
 
 /**
- * Checks if the string with chinese characters is complete and ready to use.
- * @param {string} chars
- */
-function isCharsAnswerComplete(chars) {
-    return chars.indexOf('_') === -1
-}
-
-/**
  *
- * @param {string} answer
+ * @param {Array<Array<string>>} answer
  * @param {number} hintNumber
+ * @param {string} answerMode
  */
-function renderNextHint(answer, hintNumber) {
-    const parts = answer.split(' ')
-
-    if (hintNumber < parts.length) {
-        return parts.slice(0, hintNumber).join(' ')
-    } else {
-        return answer
+function renderNextHint(answer, hintNumber, answerMode) {
+    if (hintNumber >= answer.length) {
+        return renderAnswer(answer, answerMode, answer.length + 1)
     }
+
+    return renderAnswer(answer, answerMode, hintNumber)
 }
 
 function incrementTodayProgress(chatId) {
