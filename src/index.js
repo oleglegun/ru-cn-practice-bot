@@ -13,6 +13,7 @@ const shuffle = require('lodash.shuffle')
  * @property {number} hintsUsed
  * @property {number} hintsUsedTotal
  * @property {string} answerMode `pinyin`/`chars`
+ * @property {string} direction `ru-cn`/`cn-ru`
  */
 
 /** @type {Object<string,User>} */
@@ -22,14 +23,23 @@ const token = process.env['TG_TOKEN']
 
 const bot = new TelegramBot(token, { polling: true })
 
-const keyboards = {
+const kb = {
     home: [['▶️ Start'], ['ℹ Statistics'], ['⚙️ Settings']],
-    show_answer: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
+    showAnswerCn: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
+    showAnswerRu: [['🆘 Show answer'], ['↩️ Home']],
     rate: [['✅ Correct', '❌ Wrong'], ['↩️ Home']],
     settings: {
-        pinyin: [['🔄 Mode: Pinyin'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
-        chars: [['🔄 Mode: 汉字'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
-        both: [['🔄 Mode: Pinyin + 汉字'], ['⚠️ Reset', '📛 Debug'], ['↩️ Home']],
+        answerMode: {
+            pinyin: '🔄 Mode: Pinyin',
+            chars: '🔄 Mode: 汉字',
+            both: '🔄 Mode: Pinyin + 汉字',
+        },
+        direction: {
+            'ru-cn': '↔️ Direction: Ru-Cn',
+            'cn-ru': '↔️ Direction: Cn-Ru',
+        },
+        resetProgress: ['⚠️ Reset', '📛 Debug'],
+        goBack: ['↩️ Home'],
     },
 }
 
@@ -42,14 +52,13 @@ bot.onText(/\/start/, (msg, match) => {
         questions: shuffle(Object.keys(questions)),
         wrongAnswers: [],
         answerMode: 'pinyin',
+        direction: 'ru-cn',
         activeQuestionId: '',
         hintsUsed: 0,
         hintsUsedTotal: 0,
     }
 
-    bot.sendMessage(chatId, 'Welcome to the Russian-Chinese Practice!', {
-        reply_markup: { keyboard: keyboards.home },
-    })
+    sendMessage(chatId, 'Welcome to the Russian-Chinese Practice!', kb.home)
 })
 
 bot.onText(/▶️ Start/, (msg, match) => {
@@ -59,16 +68,20 @@ bot.onText(/▶️ Start/, (msg, match) => {
 
     if (user.activeQuestionId) {
         if (user.questions.length === 0 && user.wrongAnswers.length === 0) {
-            // no more question
-            bot.sendMessage(chatId, 'No more questions.', {
-                reply_markup: { keyboard: keyboards.home },
-            })
+            // no more questions
+            sendMessage(chatId, 'No more questions.', kb.home)
         } else {
             // send active question
-            const question = questions[user.activeQuestionId].ru
-            bot.sendMessage(chatId, question, {
-                reply_markup: { keyboard: keyboards.show_answer },
-            })
+            let question
+            switch (user.direction) {
+                case 'ru-cn':
+                    question = questions[user.activeQuestionId].ru
+                    sendMessage(chatId, question, kb.showAnswerCn)
+                    break
+                case 'cn-ru':
+                    question = questions[user.activeQuestionId].cn
+                    sendMessage(chatId, renderAnswer(question, user.answerMode), kb.showAnswerRu)
+            }
         }
     } else {
         sendNextQuestion(chatId)
@@ -79,7 +92,7 @@ bot.onText(/ℹ Statistics/, (msg, match) => {
     const chatId = msg.chat.id
 
     const stats = renderStatistics(chatId)
-    bot.sendMessage(chatId, stats, { reply_markup: { keyboard: keyboards.home } })
+    sendMessage(chatId, stats, kb.home)
 })
 
 bot.onText(/🆘 Show answer/, (msg, match) => {
@@ -87,7 +100,15 @@ bot.onText(/🆘 Show answer/, (msg, match) => {
 
     const user = users[chatId]
 
-    const answer = renderAnswer(questions[user.activeQuestionId].cn, user.answerMode)
+    let question
+
+    switch (user.direction) {
+        case 'ru-cn':
+            answer = renderAnswer(questions[user.activeQuestionId].cn, user.answerMode)
+            break
+        case 'cn-ru':
+            answer = questions[user.activeQuestionId].ru
+    }
 
     sendAnswer(chatId, answer)
 })
@@ -97,7 +118,7 @@ bot.onText(/❓ Show Hint/, (msg, match) => {
 
     const user = users[chatId]
 
-    bot.sendMessage(chatId, getHint(chatId), { reply_markup: { keyboard: keyboards.show_answer } })
+    sendMessage(chatId, getHint(chatId), kb.showAnswerCn)
 })
 
 bot.onText(/✅ Correct/, (msg, match) => {
@@ -132,32 +153,36 @@ bot.onText(/🔄 Mode:/, (msg, match) => {
     users[chatId].answerMode =
         currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
-    bot.sendMessage(chatId, 'Answer mode changed.', {
-        reply_markup: { keyboard: renderSettings(chatId) },
-    })
+    sendMessage(chatId, 'Answer mode changed.', renderSettings(chatId))
+})
+
+bot.onText(/↔️ Direction:/, (msg, match) => {
+    const chatId = msg.chat.id
+
+    if (users[chatId].direction === 'ru-cn') {
+        users[chatId].direction = 'cn-ru'
+    } else {
+        users[chatId].direction = 'ru-cn'
+    }
+
+    sendMessage(chatId, 'Direction changed.', renderSettings(chatId))
 })
 
 bot.onText(/↩️ Home/, (msg, match) => {
     const chatId = msg.chat.id
 
-    bot.sendMessage(chatId, 'Home', {
-        reply_markup: { keyboard: keyboards.home },
-    })
+    sendMessage(chatId, 'Home', kb.home)
 })
 bot.onText(/⚙️ Settings/, (msg, match) => {
     const chatId = msg.chat.id
 
-    bot.sendMessage(chatId, 'Settings', {
-        reply_markup: { keyboard: renderSettings(chatId) },
-    })
+    sendMessage(chatId, 'Settings', renderSettings(chatId))
 })
 
 bot.onText(/📛 Debug/, (msg, match) => {
     const chatId = msg.chat.id
 
-    bot.sendMessage(chatId, JSON.stringify(users[chatId], null, 2), {
-        reply_markup: { keyboard: renderSettings(chatId) },
-    })
+    sendMessage(chatId, JSON.stringify(users[chatId], null, 2), renderSettings(chatId))
 })
 
 bot.onText(/⚠️ Reset/, (msg, match) => {
@@ -174,9 +199,7 @@ bot.onText(/⚠️ Reset/, (msg, match) => {
         hintsUsed: 0,
     }
 
-    bot.sendMessage(chatId, 'All your progress has been reset.', {
-        reply_markup: { keyboard: renderSettings(chatId) },
-    })
+    sendMessage(chatId, 'All your progress has been reset.', renderSettings(chatId))
 })
 
 /**
@@ -188,7 +211,7 @@ function sendAnswer(chatId, answer) {
     // reset hint counter
     users[chatId].hintsUsed = 0
 
-    bot.sendMessage(chatId, answer, { reply_markup: { keyboard: keyboards.rate } })
+    sendMessage(chatId, answer, kb.rate)
 }
 
 // bot.on('message', msg => {
@@ -200,26 +223,31 @@ function sendNextQuestion(chatId) {
     let question
 
     if (user.questions.length !== 0) {
+        // 1+ questions available
         const questionId = user.questions.pop()
         user.activeQuestionId = questionId
-        question = questions[questionId].ru
+
+        question = questions[questionId]
     } else if (user.wrongAnswers.length !== 0) {
+        // 1+ wrong questions available to re-ask
         const questionId = user.wrongAnswers.pop()
         user.activeQuestionId = questionId
-        question = questions[questionId].ru
+        question = questions[questionId]
     } else {
-        bot.sendMessage(chatId, 'No more questions.', {
-            reply_markup: { keyboard: keyboards.home },
-        })
+        sendMessage(chatId, 'No more questions.', kb.home)
         return
     }
 
     // save user
     users[chatId] = user
 
-    bot.sendMessage(chatId, question, {
-        reply_markup: { keyboard: keyboards.show_answer },
-    })
+    switch (user.direction) {
+        case 'ru-cn':
+            sendMessage(chatId, question.ru, kb.showAnswerCn)
+            break
+        case 'cn-ru':
+            sendMessage(chatId, renderAnswer(question.cn, user.answerMode), kb.showAnswerRu)
+    }
 }
 
 /*-----------------------------------------------------------------------------
@@ -227,7 +255,14 @@ function sendNextQuestion(chatId) {
  *----------------------------------------------------------------------------*/
 
 function renderSettings(chatId) {
-    return keyboards.settings[users[chatId].answerMode]
+    return [
+        [
+            kb.settings.answerMode[users[chatId].answerMode],
+            kb.settings.direction[users[chatId].direction],
+        ],
+        kb.settings.resetProgress,
+        kb.settings.goBack,
+    ]
 }
 
 /**
@@ -360,4 +395,8 @@ function todayProgress(chatId) {
 
 function updateLastAccess(chatId) {
     users[chatId].lastAccess = Date()
+}
+
+function sendMessage(chatId, message, keyboard) {
+    bot.sendMessage(chatId, message, { reply_markup: { keyboard } })
 }
