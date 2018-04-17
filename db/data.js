@@ -7,7 +7,7 @@ const { arrToObject } = require('../src/helpers')
  * @property {Array<Array<string>>} cn
  */
 
-const data = require('./data.json')
+const data = require('./phrases.json')
 
 /** @type {Object<string,Question>} */
 const questions = arrToObject(data)
