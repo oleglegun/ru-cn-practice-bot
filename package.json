@@ -4,6 +4,7 @@
   "description": "Russian-Chinese practice bot.",
   "main": "index.js",
   "scripts": {
+    "print-missing-chars": "node scripts/printMissingChars.js",
     "test": "npm test"
   },
   "author": "Oleg Legun <oleg.legun@gmail.com>",

@@ -24,10 +24,11 @@ const token = process.env['TG_TOKEN']
 const bot = new TelegramBot(token, { polling: true })
 
 const kb = {
-    home: [['▶️ Start'], ['ℹ Statistics'], ['⚙️ Settings']],
+    home: [['▶️ Start'], ['🀄 Games', 'ℹ Statistics'], ['⚙️ Settings']],
     showAnswerCn: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
     showAnswerRu: [['🆘 Show answer'], ['↩️ Home']],
     rate: [['✅ Correct', '❌ Wrong'], ['↩️ Home']],
+    goBack: '↩️ Home',
     settings: {
         answerMode: {
             pinyin: '🔄 Mode: Pinyin',
