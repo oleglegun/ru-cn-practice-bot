@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const fs = require('fs')
 
 /**
  * @typedef {Object} WordObject
@@ -12,17 +13,13 @@ const words = require('../db/words.json')
 
 addWord(parseArgs())
 
-const fs = require('fs')
-
 fs.writeFileSync('db/words.json', JSON.stringify(words, null, 2), { encoding: 'utf-8' })
 
 function parseArgs() {
-    let pinyin, char, translation
-
     const args = process.argv
 
     if (!args[2] || !args[3] || !args[4]) {
-        throw new Error('Incorrect input')
+        throw new Error('Incorrect input.')
     }
 
     return {
@@ -46,6 +43,6 @@ function addWord(wordObject) {
 
         words[wordObject.pinyin].push(wordObject)
     } else {
-        words[wordObject.pinyin] = [{ ...wordObject }]
+        words[wordObject.pinyin] = [Object.assign({}, wordObject)]
     }
 }
