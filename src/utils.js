@@ -1,4 +1,3 @@
-const chunk = require('lodash.chunk')
 const pinyinConvert = require('pinyin-convert')
 
 const arrToObject = function(arr) {

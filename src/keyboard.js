@@ -1,9 +1,9 @@
 module.exports = {
-    home: [['▶️ Start'], ['🀄 Games', 'ℹ Statistics'], ['⚙️ Settings']],
+    home: [['▶️ Start'], ['🀄 Quiz Game', 'ℹ Statistics'], ['⚙️ Settings']],
     showAnswerCn: [['❓ Show Hint', '🆘 Show answer'], ['↩️ Home']],
     showAnswerRu: [['🆘 Show answer'], ['↩️ Home']],
     rate: [['✅ Correct', '❌ Wrong'], ['↩️ Home']],
-    goBack: '↩️ Home',
+    goHome: '↩️ Home',
     settings: {
         answerMode: {
             pinyin: '🔄 Mode: Pinyin',
@@ -17,5 +17,15 @@ module.exports = {
         resetProgress: ['⚠️ Reset', '📛 Debug'],
         goBack: ['↩️ Home'],
         copyright: ['©️ Copyright'],
+    },
+
+    quizGame: {
+        play: '▶️ Play',
+        gameMode: {
+            hanziPinyin: '🔢 Mode: 汉字 - Pinyin',
+            pinyinHanzi: '🔢 Mode: Pinyin - 汉字',
+            ruHanzi: '🔢 Mode: Ru - 汉字',
+            ruPinyin: '🔢 Mode: Ru - Pinyin',
+        },
     },
 }

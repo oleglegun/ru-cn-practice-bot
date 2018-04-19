@@ -3,7 +3,7 @@ const questions = require('../db/questions')
 const users = require('../db/users')
 
 const render = {
-    Settings: chatId => {
+    SettingsKeyboard: chatId => {
         return [
             [
                 kb.settings.answerMode[users[chatId].answerMode],
@@ -11,6 +11,14 @@ const render = {
             ],
             kb.settings.resetProgress,
             kb.settings.goBack,
+        ]
+    },
+
+    GameMenuKeyboard: chatId => {
+        return [
+            [kb.quizGame.play],
+            [kb.quizGame.gameMode[users[chatId].quizGame.mode]],
+            [kb.goHome],
         ]
     },
 

@@ -27,6 +27,15 @@ module.exports = {
                 activeQuestionId: '',
                 hintsUsed: 0,
                 hintsUsedTotal: 0,
+                quizGame: {
+                    mode: 'hanziPinyin',
+                    highScores: {
+                        hanziPinyin: 0,
+                        pinyinHanzi: 0,
+                        ruHanzi: 0,
+                        ruPinyin: 0,
+                    },
+                },
             }
 
             sendMessage(chatId, 'Welcome to the Russian-Chinese Practice!', kb.home)
@@ -63,6 +72,7 @@ module.exports = {
             sendNextQuestion(chatId)
         }
     },
+
     Statistics: function(msg) {
         const chatId = msg.chat.id
         const user = users[chatId]
@@ -70,6 +80,7 @@ module.exports = {
         const stats = render.Statistics(user)
         sendMessage(chatId, stats, kb.home)
     },
+
     ShowAnswer: function(msg) {
         const chatId = msg.chat.id
 
@@ -87,11 +98,13 @@ module.exports = {
 
         sendAnswer(chatId, answer)
     },
+
     ShowHint: function(msg) {
         const chatId = msg.chat.id
 
         sendMessage(chatId, getHint(chatId), kb.showAnswerCn)
     },
+
     RateCorrect: function(msg) {
         const chatId = msg.chat.id
 
@@ -113,6 +126,7 @@ module.exports = {
 
         sendNextQuestion(chatId)
     },
+
     SwitchAnswerMode: function(msg) {
         const chatId = msg.chat.id
 
@@ -123,8 +137,9 @@ module.exports = {
         users[chatId].answerMode =
             currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
-        sendMessage(chatId, 'Answer mode changed.', render.Settings(chatId))
+        sendMessage(chatId, 'Answer mode changed.', render.SettingsKeyboard(chatId))
     },
+
     SwitchDirection: function(msg) {
         const chatId = msg.chat.id
 
@@ -136,23 +151,31 @@ module.exports = {
                 users[chatId].direction = 'ru-cn'
         }
 
-        sendMessage(chatId, 'Direction changed.', render.Settings(chatId))
+        sendMessage(chatId, 'Direction changed.', render.SettingsKeyboard(chatId))
     },
+
     GoHome: function(msg) {
         const chatId = msg.chat.id
 
         sendMessage(chatId, 'Home', kb.home)
     },
+
     OpenSettings: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, 'Settings', render.Settings(chatId))
+        sendMessage(chatId, 'Settings', render.SettingsKeyboard(chatId))
     },
+
     OpenDebug: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, JSON.stringify(users[chatId], null, 2), render.Settings(chatId))
+        const user = users[chatId]
+
+        const debugInfo = Object.assign({}, user, { questions: user.questions.length })
+
+        sendMessage(chatId, JSON.stringify(debugInfo, null, 2), render.SettingsKeyboard(chatId))
     },
+
     ResetProgress: function(msg) {
         const chatId = msg.chat.id
 
@@ -164,8 +187,34 @@ module.exports = {
             wrongAnswers: [],
             activeQuestionId: '',
             hintsUsed: 0,
+            quizGame: {
+                mode: 'hanziPinyin',
+                highScores: {
+                    hanziPinyin: 0,
+                    pinyinHanzi: 0,
+                    ruHanzi: 0,
+                    ruPinyin: 0,
+                },
+            },
         })
 
-        sendMessage(chatId, 'All your progress has been reset.', render.Settings(chatId))
+        sendMessage(chatId, 'All your progress has been reset.', render.SettingsKeyboard(chatId))
+    },
+
+    OpenGameMenu: function(msg) {
+        sendMessage(msg.chat.id, 'Quiz Game Menu', render.GameMenuKeyboard(msg.chat.id))
+    },
+
+    SwitchGameMode: msg => {
+        const chatId = msg.chat.id
+
+        const modes = ['hanziPinyin', 'pinyinHanzi', 'ruHanzi', 'ruPinyin']
+
+        const currentModeIdx = modes.indexOf(users[chatId].quizGame.mode)
+
+        users[chatId].quizGame.mode =
+            currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
+
+        sendMessage(chatId, 'Game mode changed.', render.GameMenuKeyboard(chatId))
     },
 }
