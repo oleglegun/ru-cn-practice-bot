@@ -2,7 +2,7 @@ const bot = require('./bot')
 const users = require('../db/users')
 const questions = require('../db/questions')
 const kb = require('./keyboard')
-const { renderAnswer, renderNextHint } = require('./renderers')
+const render = require('./render')
 
 /**
  *
@@ -44,7 +44,7 @@ exports.sendNextQuestion = chatId => {
             sendMessage(chatId, question.ru, kb.showAnswerCn)
             break
         case 'cn-ru':
-            sendMessage(chatId, renderAnswer(question.cn, user.answerMode), kb.showAnswerRu)
+            sendMessage(chatId, render.Answer(question.cn, user.answerMode), kb.showAnswerRu)
     }
 }
 
@@ -52,7 +52,7 @@ exports.getHint = chatId => {
     const user = users[chatId]
 
     const question = questions[user.activeQuestionId]
-    const hint = renderNextHint(question.cn, user.hintsUsed + 1, user.answerMode)
+    const hint = render.NextHint(question.cn, user.hintsUsed + 1, user.answerMode)
 
     users[chatId].hintsUsed++
     users[chatId].hintsUsedTotal++

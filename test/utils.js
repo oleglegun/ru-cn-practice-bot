@@ -9,5 +9,7 @@ const testCases = [
 ]
 
 testCases.forEach(test => {
-    t.equal(applyCharTone(test[0]), test[1])
+    applyCharTone(test[0]).then(result => {
+        t.equal(result, test[1])
+    })
 })

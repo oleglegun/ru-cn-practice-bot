@@ -2,6 +2,7 @@ const kb = require('./keyboard')
 const users = require('../db/users')
 const questions = require('../db/questions')
 const shuffle = require('lodash.shuffle')
+const render = require('./render')
 const {
     sendMessage,
     sendNextQuestion,
@@ -10,8 +11,6 @@ const {
     incrementTodayProgress,
     getHint,
 } = require('./helpers')
-
-const { renderAnswer, renderSettings, renderStatistics } = require('./renderers')
 
 module.exports = {
     StartBotIntent: function(msg) {
@@ -55,7 +54,7 @@ module.exports = {
                         question = questions[user.activeQuestionId].cn
                         sendMessage(
                             chatId,
-                            renderAnswer(question, user.answerMode),
+                            render.Answer(question, user.answerMode),
                             kb.showAnswerRu
                         )
                 }
@@ -68,7 +67,7 @@ module.exports = {
         const chatId = msg.chat.id
         const user = users[chatId]
 
-        const stats = renderStatistics(user)
+        const stats = render.Statistics(user)
         sendMessage(chatId, stats, kb.home)
     },
     ShowAnswer: function(msg) {
@@ -80,7 +79,7 @@ module.exports = {
 
         switch (user.direction) {
             case 'ru-cn':
-                answer = renderAnswer(questions[user.activeQuestionId].cn, user.answerMode)
+                answer = render.Answer(questions[user.activeQuestionId].cn, user.answerMode)
                 break
             case 'cn-ru':
                 answer = questions[user.activeQuestionId].ru
@@ -124,7 +123,7 @@ module.exports = {
         users[chatId].answerMode =
             currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
-        sendMessage(chatId, 'Answer mode changed.', renderSettings(chatId))
+        sendMessage(chatId, 'Answer mode changed.', render.Settings(chatId))
     },
     SwitchDirection: function(msg) {
         const chatId = msg.chat.id
@@ -137,7 +136,7 @@ module.exports = {
                 users[chatId].direction = 'ru-cn'
         }
 
-        sendMessage(chatId, 'Direction changed.', renderSettings(chatId))
+        sendMessage(chatId, 'Direction changed.', render.Settings(chatId))
     },
     GoHome: function(msg) {
         const chatId = msg.chat.id
@@ -147,12 +146,12 @@ module.exports = {
     OpenSettings: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, 'Settings', renderSettings(chatId))
+        sendMessage(chatId, 'Settings', render.Settings(chatId))
     },
     OpenDebug: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, JSON.stringify(users[chatId], null, 2), renderSettings(chatId))
+        sendMessage(chatId, JSON.stringify(users[chatId], null, 2), render.Settings(chatId))
     },
     ResetProgress: function(msg) {
         const chatId = msg.chat.id
@@ -167,6 +166,6 @@ module.exports = {
             hintsUsed: 0,
         })
 
-        sendMessage(chatId, 'All your progress has been reset.', renderSettings(chatId))
+        sendMessage(chatId, 'All your progress has been reset.', render.Settings(chatId))
     },
 }

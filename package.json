@@ -5,12 +5,18 @@
   "main": "src/index.js",
   "scripts": {
     "print-missing-chars": "node scripts/printMissingChars.js",
-    "test": "npm test"
+    "test": "tap test/*"
   },
   "author": "Oleg Legun <oleg.legun@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "fast-pinyin": "0.0.1",
+    "lodash.chunk": "^4.2.0",
     "lodash.shuffle": "^4.2.0",
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "pinyin-convert": "^1.0.8"
+  },
+  "devDependencies": {
+    "tap": "^11.1.4"
   }
 }
