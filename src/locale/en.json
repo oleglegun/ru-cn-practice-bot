@@ -1,0 +1,12 @@
+{
+    "welcome": "Welcome to the Russian-Chinese Practice!",
+    "noQuestions": "No more questions",
+    "modeChanged": "Answer mode changed",
+    "directionChanged": "Direction changed",
+    "settingsHelpMessage":
+        "🔤 - change language\n🔄 - change question/answer format\n↔️ - change translate direction\n⚠️ - reset all progress\n📛 - print debug information",
+    "mainMenu": "Main Menu",
+    "progressReset": "All your progress has been reset",
+    "quizGameMenu": "Quiz Game Menu",
+    "gameModeChanged": "Game mode changed"
+}
