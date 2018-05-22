@@ -1,6 +1,7 @@
 /**
  * @typedef {Object} User
  * @property {string} lastAccess
+ * @property {string} lang
  * @property {number} todayProgress
  * @property {string} activeQuestionId
  * @property {Array<string>} questions Ids of remaining questions.

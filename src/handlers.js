@@ -3,6 +3,7 @@ const users = require('../db/users')
 const questions = require('../db/questions')
 const shuffle = require('lodash.shuffle')
 const render = require('./render')
+const i18n = require('./i18n')
 const {
     sendMessage,
     sendNextQuestion,
@@ -13,12 +14,13 @@ const {
 } = require('./helpers')
 
 module.exports = {
-    StartBotIntent: function(msg) {
+    StartBotIntent: (msg) => {
         {
             const chatId = msg.chat.id
 
             users[chatId] = {
                 lastAccess: Date(),
+                lang: 'en',
                 todayProgress: 0,
                 questions: shuffle(Object.keys(questions)),
                 wrongAnswers: [],
@@ -38,7 +40,7 @@ module.exports = {
                 },
             }
 
-            sendMessage(chatId, 'Welcome to the Russian-Chinese Practice!', kb.home)
+            sendMessage(chatId, i18n(chatId).welcome, kb(chatId).home)
         }
     },
 
@@ -50,21 +52,21 @@ module.exports = {
         if (user.activeQuestionId) {
             if (user.questions.length === 0 && user.wrongAnswers.length === 0) {
                 // no more questions
-                sendMessage(chatId, 'No more questions.', kb.home)
+                sendMessage(chatId, i18n(chatId).noQuestions, kb(chatId).home)
             } else {
                 // send active question
                 let question
                 switch (user.direction) {
                     case 'ru-cn':
                         question = questions[user.activeQuestionId].ru
-                        sendMessage(chatId, question, kb.showAnswerCn)
+                        sendMessage(chatId, question, kb(chatId).showAnswerCn)
                         break
                     case 'cn-ru':
                         question = questions[user.activeQuestionId].cn
                         sendMessage(
                             chatId,
                             render.Answer(question, user.answerMode),
-                            kb.showAnswerRu
+                            kb(chatId).showAnswerRu
                         )
                 }
             }
@@ -78,7 +80,7 @@ module.exports = {
         const user = users[chatId]
 
         const stats = render.Statistics(user)
-        sendMessage(chatId, stats, kb.home)
+        sendMessage(chatId, stats, kb(chatId).home)
     },
 
     ShowAnswer: function(msg) {
@@ -102,7 +104,7 @@ module.exports = {
     ShowHint: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, getHint(chatId), kb.showAnswerCn)
+        sendMessage(chatId, getHint(chatId), kb(chatId).showAnswerCn)
     },
 
     RateCorrect: function(msg) {
@@ -137,7 +139,7 @@ module.exports = {
         users[chatId].answerMode =
             currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
-        sendMessage(chatId, 'Answer mode changed.', render.SettingsKeyboard(chatId))
+        sendMessage(chatId, i18n(chatId).modeChanged, render.SettingsKeyboard(chatId))
     },
 
     SwitchDirection: function(msg) {
@@ -151,19 +153,33 @@ module.exports = {
                 users[chatId].direction = 'ru-cn'
         }
 
-        sendMessage(chatId, 'Direction changed.', render.SettingsKeyboard(chatId))
+        sendMessage(chatId, i18n(chatId).directionChanged, render.SettingsKeyboard(chatId))
+    },
+
+    SwitchLang: function(msg) {
+        const chatId = msg.chat.id
+
+        switch (users[chatId].lang) {
+            case 'ru':
+                users[chatId].lang = 'en'
+                break
+            case 'en':
+                users[chatId].lang = 'ru'
+        }
+
+        sendMessage(chatId, i18n(chatId).settingsHelpMessage, render.SettingsKeyboard(chatId))
     },
 
     GoHome: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, 'Home', kb.home)
+        sendMessage(chatId, i18n(chatId).mainMenu, kb(chatId).home)
     },
 
     OpenSettings: function(msg) {
         const chatId = msg.chat.id
 
-        sendMessage(chatId, 'Settings', render.SettingsKeyboard(chatId))
+        sendMessage(chatId, i18n(chatId).settingsHelpMessage, render.SettingsKeyboard(chatId))
     },
 
     OpenDebug: function(msg) {
@@ -198,11 +214,11 @@ module.exports = {
             },
         })
 
-        sendMessage(chatId, 'All your progress has been reset.', render.SettingsKeyboard(chatId))
+        sendMessage(chatId, i18n(chatId).progressReset, render.SettingsKeyboard(chatId))
     },
 
     OpenGameMenu: function(msg) {
-        sendMessage(msg.chat.id, 'Quiz Game Menu', render.GameMenuKeyboard(msg.chat.id))
+        sendMessage(msg.chat.id, i18n(msg.chat.id).quizGameMenu, render.GameMenuKeyboard(msg.chat.id))
     },
 
     SwitchGameMode: msg => {
@@ -215,6 +231,6 @@ module.exports = {
         users[chatId].quizGame.mode =
             currentModeIdx === modes.length - 1 ? modes[0] : modes[currentModeIdx + 1]
 
-        sendMessage(chatId, 'Game mode changed.', render.GameMenuKeyboard(chatId))
+        sendMessage(chatId, i18n(chatId).gameModeChanged, render.GameMenuKeyboard(chatId))
     },
 }

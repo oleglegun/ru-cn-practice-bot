@@ -6,19 +6,20 @@ const render = {
     SettingsKeyboard: chatId => {
         return [
             [
-                kb.settings.answerMode[users[chatId].answerMode],
-                kb.settings.direction[users[chatId].direction],
+                kb(chatId).settings.lang[users[chatId].lang],
+                kb(chatId).settings.answerMode[users[chatId].answerMode],
+                kb(chatId).settings.direction[users[chatId].direction],
             ],
-            kb.settings.resetProgress,
-            kb.settings.goBack,
+            kb(chatId).settings.resetProgress,
+            kb(chatId).settings.goBack,
         ]
     },
 
     GameMenuKeyboard: chatId => {
         return [
-            [kb.quizGame.play],
-            [kb.quizGame.gameMode[users[chatId].quizGame.mode]],
-            [kb.goHome],
+            [kb(chatId).quizGame.play],
+            [kb(chatId).quizGame.gameMode[users[chatId].quizGame.mode]],
+            [kb(chatId).goHome],
         ]
     },
 
@@ -71,11 +72,17 @@ const render = {
                 ? 100
                 : parseInt(correctAnswers / (correctAnswers + wrongAnswers) * 100)
 
-        return `Today's progress: ${this.TodayProgress(user)} questions
+        return user.lang === 'en'
+            ? `Today's progress: ${this.TodayProgress(user)} qst.
 Correct answers: ${correctAnswers}/${totalQuestions} (${correctPercent}%)
 Wrong answers: ${wrongAnswers}/${totalQuestions} (${wrongPercent}%)
 Correct/Wrong rate: ${correctWrongPercent}%
 Hints used: ${user.hintsUsed}`
+            : `Прогресс на сегодня: ${this.TodayProgress(user)} вопр.
+Правильные ответы: ${correctAnswers}/${totalQuestions} (${correctPercent}%)
+Неправильные ответы: ${wrongAnswers}/${totalQuestions} (${wrongPercent}%)
+Правильно/неправильно: ${correctWrongPercent}%
+Использовано подсказок: ${user.hintsUsed}`
     },
 
     /**

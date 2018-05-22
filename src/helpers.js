@@ -3,6 +3,7 @@ const users = require('../db/users')
 const questions = require('../db/questions')
 const kb = require('./keyboard')
 const render = require('./render')
+const i18n = require('./i18n')
 
 /**
  *
@@ -13,7 +14,7 @@ exports.sendAnswer = (chatId, answer) => {
     // reset hint counter
     users[chatId].hintsUsed = 0
 
-    sendMessage(chatId, answer, kb.rate)
+    sendMessage(chatId, answer, kb(chatId).rate)
 }
 
 exports.sendNextQuestion = chatId => {
@@ -32,7 +33,7 @@ exports.sendNextQuestion = chatId => {
         user.activeQuestionId = questionId
         question = questions[questionId]
     } else {
-        sendMessage(chatId, 'No more questions.', kb.home)
+        sendMessage(chatId, i18n(chatId).noQuestions, kb(chatId).home)
         return
     }
 
@@ -41,10 +42,10 @@ exports.sendNextQuestion = chatId => {
 
     switch (user.direction) {
         case 'ru-cn':
-            sendMessage(chatId, question.ru, kb.showAnswerCn)
+            sendMessage(chatId, question.ru, kb(chatId).showAnswerCn)
             break
         case 'cn-ru':
-            sendMessage(chatId, render.Answer(question.cn, user.answerMode), kb.showAnswerRu)
+            sendMessage(chatId, render.Answer(question.cn, user.answerMode), kb(chatId).showAnswerRu)
     }
 }
 
